@@ -1,0 +1,82 @@
+jumlah data uji ke- 1 = 30
+jumlah data latih ke- 1 = 263
+jumlah setiap kelas pada data uji ke- 1 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	11
+"2"	"LowRisk"	19
+jumlah setiap kelas pada data latih ke- 1 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	87
+"2"	"LowRisk"	176
+Pohon Keputusan ke- 1
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+
+Classification Tree
+Number of samples: 263 
+Number of predictors: 15 
+
+Tree size: 8 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sat Mar 04 20:13:28 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 263 cases (16 attributes) from undefined.data
+
+Decision tree:
+
+FIS100 in {C,D,E}: HighRisk (69/10)
+FIS100 in {A,AB,B,BC}:
+:...EKO100 = E: LowRisk (0)
+    EKO100 in {A,AB,B,BC}:
+    :...MAT103 in {A,AB,B,BC,E}: LowRisk (164/8)
+    :   MAT103 in {C,D}:
+    :   :...BIO100 = AB: LowRisk (4)
+    :       BIO100 in {A,B,BC,C,D,E}: HighRisk (12/3)
+    EKO100 in {C,D}:
+    :...KIM101 in {A,B,BC,C,D,E}: HighRisk (10)
+        KIM101 = AB:
+        :...IPB108 in {A,AB,BC,C,D}: LowRisk (3)
+            IPB108 = B: HighRisk (1)
+
+
+Evaluation on training data (263 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	     7   21( 8.0%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	    79     8    (a): class HighRisk
+	    13   163    (b): class LowRisk
+
+
+	Attribute usage:
+
+	100.00%	FIS100
+	 73.76%	EKO100
+	 68.44%	MAT103
+	  6.08%	BIO100
+	  5.32%	KIM101
+	  1.52%	IPB108
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+akurasi pada k ke- 	1	: 	76.67
+Confusion Matrix dan akurasi ke- 1
+          
+predict    HighRisk LowRisk
+  HighRisk        5       1
+  LowRisk         6      18

@@ -1,0 +1,213 @@
+Pohon Keputusan ke- 3
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+
+Rule-Based Model
+Number of samples: 264 
+Number of predictors: 15 
+
+Number of Rules: 14 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sun Mar 05 00:59:28 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 264 cases (16 attributes) from undefined.data
+
+Rules:
+
+Rule 1: (6, lift 2.6)
+	FIS100 in {B, BC}
+	IPB112 = B
+	MAT100 in {B, BC, C}
+	KOM201 in {A, BC}
+	->  class HighRisk  [0.875]
+
+Rule 2: (5, lift 2.6)
+	IPB107 = B
+	IPB112 = B
+	->  class HighRisk  [0.857]
+
+Rule 3: (49/7, lift 2.5)
+	EKO100 in {C, D}
+	->  class HighRisk  [0.843]
+
+Rule 4: (65/10, lift 2.5)
+	FIS100 in {C, D}
+	->  class HighRisk  [0.836]
+
+Rule 5: (41/20, lift 1.5)
+	MAT103 = BC
+	->  class HighRisk  [0.512]
+
+Rule 6: (42/6, lift 2.8)
+	IPB112 = A
+	MAT100 in {A, AB}
+	KOM201 in {A, B, BC}
+	MAT103 in {A, AB}
+	->  class LowRisk  [0.841]
+
+Rule 7: (13/2, lift 2.7)
+	FIS100 in {A, AB, B, BC}
+	MAT100 in {A, AB}
+	IPB100 in {B, C}
+	->  class LowRisk  [0.800]
+
+Rule 8: (89/35, lift 2.0)
+	FIS100 in {A, AB, B, BC}
+	EKO100 = A
+	->  class LowRisk  [0.604]
+
+Rule 9: (6, lift 2.4)
+	IPB112 = A
+	BIO100 in {A, B, BC}
+	EKO100 = A
+	KOM201 = AB
+	MAT103 in {A, AB}
+	->  class MediumRisk  [0.875]
+
+Rule 10: (6, lift 2.4)
+	IPB111 = AB
+	KPM130 = AB
+	MAT100 = B
+	EKO100 = A
+	->  class MediumRisk  [0.875]
+
+Rule 11: (3, lift 2.2)
+	IPB112 = B
+	MAT100 = AB
+	MAT103 = A
+	->  class MediumRisk  [0.800]
+
+Rule 12: (44/12, lift 2.0)
+	FIS100 in {A, AB, B, BC}
+	IPB112 in {A, AB, BC, D}
+	MAT100 in {B, BC, C}
+	EKO100 in {AB, B, BC}
+	->  class MediumRisk  [0.717]
+
+Rule 13: (27/9, lift 1.8)
+	MAT100 in {A, AB}
+	IPB100 in {A, AB, BC}
+	MAT103 = B
+	->  class MediumRisk  [0.655]
+
+Rule 14: (199/112, lift 1.2)
+	FIS100 in {A, AB, B, BC}
+	->  class MediumRisk  [0.438]
+
+Default class: MediumRisk
+
+
+Evaluation on training data (264 cases):
+
+	        Rules     
+	  ----------------
+	    No      Errors
+
+	    14   56(21.2%)   <<
+
+
+	   (a)   (b)   (c)    <-classified as
+	  ----  ----  ----
+	    73     6     9    (a): class HighRisk
+	     1    63    15    (b): class LowRisk
+	    15    10    72    (c): class MediumRisk
+
+
+	Attribute usage:
+
+	100.00%	FIS100
+	 68.94%	EKO100
+	 51.14%	MAT100
+	 45.08%	MAT103
+	 39.77%	IPB112
+	 20.45%	KOM201
+	 15.15%	IPB100
+	  2.27%	IPB111
+	  2.27%	KPM130
+	  2.27%	BIO100
+	  1.89%	IPB107
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+akurasi pada k ke- 	3	: 	72.41
+Confusion Matrix dan akurasi ke- 3
+            
+predictRule  HighRisk LowRisk MediumRisk
+  HighRisk         10       1          0
+  LowRisk           1       4          5
+  MediumRisk        1       0          7
+PostResample TREE ke- 3
+ Accuracy     Kappa 
+0.6896552 0.5364121 
+PostResample RULE ke- 3
+ Accuracy     Kappa 
+0.7241379 0.5879218 
+Confusion Matrix TREE ke- 3
+Confusion Matrix and Statistics
+
+            Reference
+Prediction   HighRisk LowRisk MediumRisk
+  HighRisk          9       0          0
+  LowRisk           1       4          5
+  MediumRisk        2       1          7
+
+Overall Statistics
+                                          
+               Accuracy : 0.6897          
+                 95% CI : (0.4917, 0.8472)
+    No Information Rate : 0.4138          
+    P-Value [Acc > NIR] : 0.002483        
+                                          
+                  Kappa : 0.5364          
+ Mcnemar's Test P-Value : 0.129003        
+
+Statistics by Class:
+
+                     Class: HighRisk Class: LowRisk Class: MediumRisk
+Sensitivity                   0.7500         0.8000            0.5833
+Specificity                   1.0000         0.7500            0.8235
+Pos Pred Value                1.0000         0.4000            0.7000
+Neg Pred Value                0.8500         0.9474            0.7368
+Prevalence                    0.4138         0.1724            0.4138
+Detection Rate                0.3103         0.1379            0.2414
+Detection Prevalence          0.3103         0.3448            0.3448
+Balanced Accuracy             0.8750         0.7750            0.7034
+Confusion Matrix RULE ke- 3
+Confusion Matrix and Statistics
+
+            Reference
+Prediction   HighRisk LowRisk MediumRisk
+  HighRisk         10       1          0
+  LowRisk           1       4          5
+  MediumRisk        1       0          7
+
+Overall Statistics
+                                          
+               Accuracy : 0.7241          
+                 95% CI : (0.5276, 0.8727)
+    No Information Rate : 0.4138          
+    P-Value [Acc > NIR] : 0.0007098       
+                                          
+                  Kappa : 0.5879          
+ Mcnemar's Test P-Value : 0.1116102       
+
+Statistics by Class:
+
+                     Class: HighRisk Class: LowRisk Class: MediumRisk
+Sensitivity                   0.8333         0.8000            0.5833
+Specificity                   0.9412         0.7500            0.9412
+Pos Pred Value                0.9091         0.4000            0.8750
+Neg Pred Value                0.8889         0.9474            0.7619
+Prevalence                    0.4138         0.1724            0.4138
+Detection Rate                0.3448         0.1379            0.2414
+Detection Prevalence          0.3793         0.3448            0.2759
+Balanced Accuracy             0.8873         0.7750            0.7623

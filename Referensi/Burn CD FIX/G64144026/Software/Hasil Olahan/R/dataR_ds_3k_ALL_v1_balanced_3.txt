@@ -1,0 +1,134 @@
+jumlah data uji ke- 3 = 59
+jumlah data latih ke- 3 = 526
+jumlah setiap kelas pada data uji ke- 3 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	22
+"2"	"LowRisk"	20
+"3"	"MediumRisk"	17
+jumlah setiap kelas pada data latih ke- 3 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	173
+"2"	"LowRisk"	175
+"3"	"MediumRisk"	178
+Pohon Keputusan ke- 3
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+
+Classification Tree
+Number of samples: 526 
+Number of predictors: 15 
+
+Tree size: 31 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sun Mar 05 00:57:47 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 526 cases (16 attributes) from undefined.data
+
+Decision tree:
+
+EKO100 in {A,AB}:
+:...MAT103 in {A,AB,B,E}: LowRisk (114/3)
+:   MAT103 in {BC,C,D}:
+:   :...KPM130 in {B,BC,C,D}: MediumRisk (12)
+:       KPM130 in {A,AB}:
+:       :...FIS100 in {A,D,E}: MediumRisk (0)
+:           FIS100 = BC: LowRisk (5)
+:           FIS100 in {AB,B,C}:
+:           :...IPB107 in {BC,D}: MediumRisk (0)
+:               IPB107 = B: LowRisk (4)
+:               IPB107 in {A,AB,C}:
+:               :...BIO100 in {A,B,BC,C,D,E}: MediumRisk (23/2)
+:                   BIO100 = AB: LowRisk (3)
+EKO100 in {B,BC,C,D,E}:
+:...MAT103 = AB:
+    :...IPB111 = A: MediumRisk (3)
+    :   IPB111 in {AB,B,BC,C}: LowRisk (18)
+    MAT103 in {A,B,BC,C,D,E}:
+    :...KOM201 = D: HighRisk (0)
+        KOM201 = A:
+        :...MAT100 in {A,C,D,E}: MediumRisk (21/2)
+        :   MAT100 in {AB,B,BC}:
+        :   :...IPB108 in {A,AB,BC,C,D}: LowRisk (11)
+        :       IPB108 = B: MediumRisk (5)
+        KOM201 in {AB,B,BC,C}:
+        :...BIO100 in {A,AB,B,BC,E}:
+            :...MAT103 = E: MediumRisk (0)
+            :   MAT103 in {A,B,BC,C}:
+            :   :...FIS100 in {A,BC}: LowRisk (9/1)
+            :   :   FIS100 in {AB,B,C,D,E}: MediumRisk (49/5)
+            :   MAT103 = D:
+            :   :...IPB111 in {A,AB,C}: HighRisk (9)
+            :       IPB111 in {B,BC}: MediumRisk (7)
+            BIO100 in {C,D}:
+            :...IPB108 in {AB,C,D}: MediumRisk (14/1)
+                IPB108 in {A,B,BC}:
+                :...IPB100 = BC: MediumRisk (9/2)
+                    IPB100 in {A,AB,B,C,D}:
+                    :...KPM130 = AB:
+                        :...IPB112 in {A,AB,BC,C,D,E}: MediumRisk (14/2)
+                        :   IPB112 = B: HighRisk (5)
+                        KPM130 in {A,B,D}:
+                        :...IPB107 in {A,AB,BC,C,D}: HighRisk (92/2)
+                        :   IPB107 = B:
+                        :   :...MAT103 in {B,BC,C}: MediumRisk (7)
+                        :       MAT103 in {A,D,E}: HighRisk (12)
+                        KPM130 in {BC,C}:
+                        :...EKO100 in {B,E}: HighRisk (0)
+                            EKO100 = BC: MediumRisk (11)
+                            EKO100 in {C,D}:
+                            :...IPB106 in {BC,C}: MediumRisk (7/1)
+                                IPB106 in {A,AB,B}:
+                                :...IPB107 in {AB,D}: MediumRisk (3)
+                                    IPB107 in {A,B,BC,C}: HighRisk (59/2)
+
+
+Evaluation on training data (526 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    26   23( 4.4%)   <<
+
+
+	   (a)   (b)   (c)    <-classified as
+	  ----  ----  ----
+	   173                (a): class HighRisk
+	         160    15    (b): class LowRisk
+	     4     4   170    (c): class MediumRisk
+
+
+	Attribute usage:
+
+	100.00%	EKO100
+	100.00%	MAT103
+	 65.40%	KOM201
+	 63.31%	BIO100
+	 48.86%	KPM130
+	 47.34%	IPB108
+	 41.63%	IPB100
+	 38.59%	IPB107
+	 17.68%	FIS100
+	 13.12%	IPB106
+	  7.03%	IPB111
+	  7.03%	MAT100
+	  3.61%	IPB112
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+akurasi pada k ke- 	3	: 	79.66
+Confusion Matrix dan akurasi ke- 3
+            
+predict      HighRisk LowRisk MediumRisk
+  HighRisk         22       0          3
+  LowRisk           0      12          1
+  MediumRisk        0       8         13

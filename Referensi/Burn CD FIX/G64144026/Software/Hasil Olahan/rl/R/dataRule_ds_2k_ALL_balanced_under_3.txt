@@ -1,0 +1,162 @@
+Pohon Keputusan ke- 3
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+
+Rule-Based Model
+Number of samples: 177 
+Number of predictors: 15 
+
+Number of Rules: 9 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sat Mar 04 20:16:51 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 177 cases (16 attributes) from undefined.data
+
+Rules:
+
+Rule 1: (74/5, lift 1.9)
+	BIO100 in {A, BC, C, D, E}
+	EKO100 in {B, BC, C, D, E}
+	->  class HighRisk  [0.921]
+
+Rule 2: (48/3, lift 1.9)
+	KPM130 in {B, BC, C, D}
+	MAT103 in {BC, C, D}
+	->  class HighRisk  [0.920]
+
+Rule 3: (50/5, lift 1.8)
+	FIS100 in {AB, C}
+	MAT103 in {BC, C, D}
+	->  class HighRisk  [0.885]
+
+Rule 4: (72/9, lift 1.7)
+	EKO100 in {BC, C, D, E}
+	->  class HighRisk  [0.865]
+
+Rule 5: (88/18, lift 1.6)
+	MAT103 in {BC, C, D}
+	->  class HighRisk  [0.789]
+
+Rule 6: (66/2, lift 1.9)
+	EKO100 in {A, AB}
+	MAT103 in {A, AB, B}
+	->  class LowRisk  [0.956]
+
+Rule 7: (16, lift 1.9)
+	FIS100 in {A, BC}
+	KPM130 in {A, AB}
+	EKO100 in {A, AB}
+	->  class LowRisk  [0.944]
+
+Rule 8: (27/1, lift 1.9)
+	BIO100 in {AB, B}
+	MAT103 in {A, AB, C}
+	->  class LowRisk  [0.931]
+
+Rule 9: (55/10, lift 1.6)
+	BIO100 in {AB, B}
+	->  class LowRisk  [0.807]
+
+Default class: LowRisk
+
+
+Evaluation on training data (177 cases):
+
+	        Rules     
+	  ----------------
+	    No      Errors
+
+	     9   13( 7.3%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	    84     4    (a): class HighRisk
+	     9    80    (b): class LowRisk
+
+
+	Attribute usage:
+
+	 88.70%	MAT103
+	 87.01%	EKO100
+	 72.88%	BIO100
+	 37.29%	FIS100
+	 36.16%	KPM130
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+akurasi pada k ke- 	3	: 	84.21
+Confusion Matrix dan akurasi ke- 3
+           
+predictRule HighRisk LowRisk
+   HighRisk       10       3
+   LowRisk         0       6
+PostResample TREE ke- 3
+ Accuracy     Kappa 
+0.8947368 0.7865169 
+PostResample RULE ke- 3
+ Accuracy     Kappa 
+0.8421053 0.6779661 
+Confusion Matrix TREE ke- 3
+Confusion Matrix and Statistics
+
+          Reference
+Prediction HighRisk LowRisk
+  HighRisk       10       2
+  LowRisk         0       7
+                                         
+               Accuracy : 0.8947         
+                 95% CI : (0.6686, 0.987)
+    No Information Rate : 0.5263         
+    P-Value [Acc > NIR] : 0.0007916      
+                                         
+                  Kappa : 0.7865         
+ Mcnemar's Test P-Value : 0.4795001      
+                                         
+            Sensitivity : 1.0000         
+            Specificity : 0.7778         
+         Pos Pred Value : 0.8333         
+         Neg Pred Value : 1.0000         
+             Prevalence : 0.5263         
+         Detection Rate : 0.5263         
+   Detection Prevalence : 0.6316         
+      Balanced Accuracy : 0.8889         
+                                         
+       'Positive' Class : HighRisk       
+                                         
+Confusion Matrix RULE ke- 3
+Confusion Matrix and Statistics
+
+          Reference
+Prediction HighRisk LowRisk
+  HighRisk       10       3
+  LowRisk         0       6
+                                          
+               Accuracy : 0.8421          
+                 95% CI : (0.6042, 0.9662)
+    No Information Rate : 0.5263          
+    P-Value [Acc > NIR] : 0.004362        
+                                          
+                  Kappa : 0.678           
+ Mcnemar's Test P-Value : 0.248213        
+                                          
+            Sensitivity : 1.0000          
+            Specificity : 0.6667          
+         Pos Pred Value : 0.7692          
+         Neg Pred Value : 1.0000          
+             Prevalence : 0.5263          
+         Detection Rate : 0.5263          
+   Detection Prevalence : 0.6842          
+      Balanced Accuracy : 0.8333          
+                                          
+       'Positive' Class : HighRisk        
+                                          

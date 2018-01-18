@@ -1,0 +1,99 @@
+jumlah data uji ke- 5 = 39
+jumlah data latih ke- 5 = 351
+jumlah setiap kelas pada data uji ke- 5 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	17
+"2"	"LowRisk"	22
+jumlah setiap kelas pada data latih ke- 5 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	178
+"2"	"LowRisk"	173
+Pohon Keputusan ke- 5
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+
+Classification Tree
+Number of samples: 351 
+Number of predictors: 15 
+
+Tree size: 16 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sat Mar 04 20:15:37 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 351 cases (16 attributes) from undefined.data
+
+Decision tree:
+
+MAT103 in {A,AB,B}:
+:...BIO100 = E: LowRisk (0)
+:   BIO100 in {A,AB,B,BC}:
+:   :...EKO100 in {A,AB,B,BC,D,E}: LowRisk (131/3)
+:   :   EKO100 = C: HighRisk (2)
+:   BIO100 in {C,D}:
+:   :...IPB112 in {B,C,E}: HighRisk (14)
+:       IPB112 in {A,AB,BC,D}:
+:       :...IPB111 = A: HighRisk (4)
+:           IPB111 in {AB,BC,C}: LowRisk (13/1)
+:           IPB111 = B:
+:           :...IPB100 in {AB,B,BC}: LowRisk (4)
+:               IPB100 in {A,C,D}: HighRisk (4)
+MAT103 in {BC,C,D,E}:
+:...FIS100 in {A,AB,C,D,E}: HighRisk (130/7)
+    FIS100 in {B,BC}:
+    :...MAT103 in {D,E}: HighRisk (14)
+        MAT103 in {BC,C}:
+        :...KPM130 = A: LowRisk (10)
+            KPM130 in {BC,C,D}: HighRisk (6)
+            KPM130 = AB:
+            :...AGB100 in {A,AB}: LowRisk (10/2)
+            :   AGB100 = B: HighRisk (2)
+            KPM130 = B:
+            :...IPB108 in {A,B,BC,C,D}: LowRisk (5/1)
+                IPB108 = AB: HighRisk (2)
+
+
+Evaluation on training data (351 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    15   14( 4.0%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	   171     7    (a): class HighRisk
+	     7   166    (b): class LowRisk
+
+
+	Attribute usage:
+
+	100.00%	MAT103
+	 51.00%	FIS100
+	 49.00%	BIO100
+	 37.89%	EKO100
+	 11.11%	IPB112
+	  9.97%	KPM130
+	  7.12%	IPB111
+	  3.42%	AGB100
+	  2.28%	IPB100
+	  1.99%	IPB108
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+akurasi pada k ke- 	5	: 	79.49
+Confusion Matrix dan akurasi ke- 5
+          
+predict    HighRisk LowRisk
+  HighRisk       14       5
+  LowRisk         3      17

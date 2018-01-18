@@ -1,0 +1,152 @@
+Pohon Keputusan ke- 10
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+
+Rule-Based Model
+Number of samples: 263 
+Number of predictors: 15 
+
+Number of Rules: 5 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sun Mar 05 00:56:46 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 263 cases (16 attributes) from undefined.data
+
+Rules:
+
+Rule 1: (153/9, lift 1.4)
+	FIS100 in {A, AB, B, BC}
+	IPB100 in {A, AB, B, BC}
+	MAT103 in {A, AB, B, BC}
+	->  class LowRisk  [0.935]
+
+Rule 2: (135/9, lift 1.4)
+	FIS100 in {A, AB, B, BC}
+	IPB111 in {A, AB, BC, C}
+	MAT103 in {A, AB, B, BC}
+	->  class LowRisk  [0.927]
+
+Rule 3: (7/1, lift 2.7)
+	FIS100 in {AB, B, BC}
+	IPB111 = B
+	IPB100 in {C, D}
+	->  class MediumRisk  [0.778]
+
+Rule 4: (70/21, lift 2.4)
+	FIS100 in {C, D, E}
+	->  class MediumRisk  [0.694]
+
+Rule 5: (63/22, lift 2.2)
+	MAT103 in {C, D}
+	->  class MediumRisk  [0.646]
+
+Default class: LowRisk
+
+
+Evaluation on training data (263 cases):
+
+	        Rules     
+	  ----------------
+	    No      Errors
+
+	     5   41(15.6%)   <<
+
+
+	   (a)   (b)   (c)    <-classified as
+	  ----  ----  ----
+	                13    (a): class HighRisk
+	         157    16    (b): class LowRisk
+	          12    65    (c): class MediumRisk
+
+
+	Attribute usage:
+
+	 93.54%	FIS100
+	 88.21%	MAT103
+	 60.84%	IPB100
+	 53.99%	IPB111
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+akurasi pada k ke- 	10	: 	76.67
+Confusion Matrix dan akurasi ke- 10
+            
+predictRule  HighRisk LowRisk MediumRisk
+  HighRisk          0       0          0
+  LowRisk           1      20          1
+  MediumRisk        3       2          3
+PostResample TREE ke- 10
+ Accuracy     Kappa 
+0.7666667 0.4531250 
+PostResample RULE ke- 10
+ Accuracy     Kappa 
+0.7666667 0.4531250 
+Confusion Matrix TREE ke- 10
+Confusion Matrix and Statistics
+
+            Reference
+Prediction   HighRisk LowRisk MediumRisk
+  HighRisk          0       0          0
+  LowRisk           1      20          1
+  MediumRisk        3       2          3
+
+Overall Statistics
+                                          
+               Accuracy : 0.7667          
+                 95% CI : (0.5772, 0.9007)
+    No Information Rate : 0.7333          
+    P-Value [Acc > NIR] : 0.4308          
+                                          
+                  Kappa : 0.4531          
+ Mcnemar's Test P-Value : 0.2276          
+
+Statistics by Class:
+
+                     Class: HighRisk Class: LowRisk Class: MediumRisk
+Sensitivity                   0.0000         0.9091            0.7500
+Specificity                   1.0000         0.7500            0.8077
+Pos Pred Value                   NaN         0.9091            0.3750
+Neg Pred Value                0.8667         0.7500            0.9545
+Prevalence                    0.1333         0.7333            0.1333
+Detection Rate                0.0000         0.6667            0.1000
+Detection Prevalence          0.0000         0.7333            0.2667
+Balanced Accuracy             0.5000         0.8295            0.7788
+Confusion Matrix RULE ke- 10
+Confusion Matrix and Statistics
+
+            Reference
+Prediction   HighRisk LowRisk MediumRisk
+  HighRisk          0       0          0
+  LowRisk           1      20          1
+  MediumRisk        3       2          3
+
+Overall Statistics
+                                          
+               Accuracy : 0.7667          
+                 95% CI : (0.5772, 0.9007)
+    No Information Rate : 0.7333          
+    P-Value [Acc > NIR] : 0.4308          
+                                          
+                  Kappa : 0.4531          
+ Mcnemar's Test P-Value : 0.2276          
+
+Statistics by Class:
+
+                     Class: HighRisk Class: LowRisk Class: MediumRisk
+Sensitivity                   0.0000         0.9091            0.7500
+Specificity                   1.0000         0.7500            0.8077
+Pos Pred Value                   NaN         0.9091            0.3750
+Neg Pred Value                0.8667         0.7500            0.9545
+Prevalence                    0.1333         0.7333            0.1333
+Detection Rate                0.0000         0.6667            0.1000
+Detection Prevalence          0.0000         0.7333            0.2667
+Balanced Accuracy             0.5000         0.8295            0.7788

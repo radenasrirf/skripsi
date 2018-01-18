@@ -1,0 +1,91 @@
+jumlah data uji ke- 4 = 5
+jumlah data latih ke- 4 = 46
+jumlah setiap kelas pada data uji ke- 4 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	3
+"2"	"LowRisk"	2
+"3"	"MediumRisk"	0
+jumlah setiap kelas pada data latih ke- 4 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	14
+"2"	"LowRisk"	15
+"3"	"MediumRisk"	17
+Pohon Keputusan ke- 4
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+
+Classification Tree
+Number of samples: 46 
+Number of predictors: 15 
+
+Tree size: 11 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Fri Apr 28 15:03:43 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 46 cases (16 attributes) from undefined.data
+
+Decision tree:
+
+BIO100 in {A,AB,B}:
+:...IPB108 in {A,BC,C,D}: LowRisk (8)
+:   IPB108 = B: MediumRisk (3/1)
+:   IPB108 = AB:
+:   :...EKO100 in {A,AB,BC,C,D,E}: LowRisk (6/1)
+:       EKO100 = B: MediumRisk (2)
+BIO100 in {BC,C,D}:
+:...IPB100 = A: MediumRisk (6/1)
+    IPB100 in {B,C,D}: HighRisk (10/1)
+    IPB100 = AB:
+    :...IPB107 = C: MediumRisk (1)
+        IPB107 in {A,B}:
+        :...KPM130 in {A,AB,B,C,D}: MediumRisk (4)
+        :   KPM130 = BC: LowRisk (1)
+        IPB107 in {AB,BC}:
+        :...FIS100 = BC: MediumRisk (1)
+            FIS100 in {A,AB,B,C,D}: HighRisk (4)
+
+
+Evaluation on training data (46 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    11    4( 8.7%)   <<
+
+
+	   (a)   (b)   (c)    <-classified as
+	  ----  ----  ----
+	    13           1    (a): class HighRisk
+	          14     1    (b): class LowRisk
+	     1     1    15    (c): class MediumRisk
+
+
+	Attribute usage:
+
+	100.00%	BIO100
+	 58.70%	IPB100
+	 41.30%	IPB108
+	 23.91%	IPB107
+	 17.39%	EKO100
+	 10.87%	FIS100
+	 10.87%	KPM130
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+akurasi pada k ke- 	4	: 	40.00
+Confusion Matrix dan akurasi ke- 4
+            
+predict      HighRisk LowRisk MediumRisk
+  HighRisk          1       0          0
+  LowRisk           0       1          0
+  MediumRisk        2       1          0

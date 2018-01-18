@@ -1,0 +1,168 @@
+Pohon Keputusan ke- 8
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+
+Rule-Based Model
+Number of samples: 351 
+Number of predictors: 15 
+
+Number of Rules: 9 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sat Mar 04 20:15:44 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 351 cases (16 attributes) from undefined.data
+
+Rules:
+
+Rule 1: (29, lift 1.9)
+	BIO100 in {C, D}
+	IPB100 in {C, D}
+	KIM101 in {A, B, BC}
+	->  class HighRisk  [0.968]
+
+Rule 2: (64/3, lift 1.9)
+	MAT103 = D
+	->  class HighRisk  [0.939]
+
+Rule 3: (118/7, lift 1.9)
+	FIS100 in {C, D, E}
+	MAT103 in {BC, C, D, E}
+	->  class HighRisk  [0.933]
+
+Rule 4: (48/3, lift 1.8)
+	IPB108 = B
+	MAT100 in {AB, B, C, D}
+	MAT103 in {BC, C, D}
+	->  class HighRisk  [0.920]
+
+Rule 5: (8, lift 1.8)
+	IPB108 = AB
+	KPM130 = B
+	MAT103 in {BC, C, D}
+	->  class HighRisk  [0.900]
+
+Rule 6: (7, lift 1.8)
+	KPM130 = C
+	MAT103 in {BC, C}
+	->  class HighRisk  [0.889]
+
+Rule 7: (133/6, lift 1.9)
+	BIO100 in {A, AB, B, BC}
+	MAT103 in {A, AB, B}
+	->  class LowRisk  [0.948]
+
+Rule 8: (90/7, lift 1.8)
+	IPB100 in {AB, B, BC}
+	MAT103 in {A, AB, B}
+	->  class LowRisk  [0.913]
+
+Rule 9: (202/61, lift 1.4)
+	FIS100 in {AB, B, BC}
+	->  class LowRisk  [0.696]
+
+Default class: LowRisk
+
+
+Evaluation on training data (351 cases):
+
+	        Rules     
+	  ----------------
+	    No      Errors
+
+	     9   22( 6.3%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	   162    13    (a): class HighRisk
+	     9   167    (b): class LowRisk
+
+
+	Attribute usage:
+
+	 91.17%	FIS100
+	 87.75%	MAT103
+	 46.15%	BIO100
+	 33.90%	IPB100
+	 15.95%	IPB108
+	 13.68%	MAT100
+	  8.26%	KIM101
+	  4.27%	KPM130
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+akurasi pada k ke- 	8	: 	94.87
+Confusion Matrix dan akurasi ke- 8
+           
+predictRule HighRisk LowRisk
+   HighRisk       19       1
+   LowRisk         1      18
+PostResample TREE ke- 8
+ Accuracy     Kappa 
+0.9487179 0.8973684 
+PostResample RULE ke- 8
+ Accuracy     Kappa 
+0.9487179 0.8973684 
+Confusion Matrix TREE ke- 8
+Confusion Matrix and Statistics
+
+          Reference
+Prediction HighRisk LowRisk
+  HighRisk       19       1
+  LowRisk         1      18
+                                          
+               Accuracy : 0.9487          
+                 95% CI : (0.8268, 0.9937)
+    No Information Rate : 0.5128          
+    P-Value [Acc > NIR] : 3.451e-09       
+                                          
+                  Kappa : 0.8974          
+ Mcnemar's Test P-Value : 1               
+                                          
+            Sensitivity : 0.9500          
+            Specificity : 0.9474          
+         Pos Pred Value : 0.9500          
+         Neg Pred Value : 0.9474          
+             Prevalence : 0.5128          
+         Detection Rate : 0.4872          
+   Detection Prevalence : 0.5128          
+      Balanced Accuracy : 0.9487          
+                                          
+       'Positive' Class : HighRisk        
+                                          
+Confusion Matrix RULE ke- 8
+Confusion Matrix and Statistics
+
+          Reference
+Prediction HighRisk LowRisk
+  HighRisk       19       1
+  LowRisk         1      18
+                                          
+               Accuracy : 0.9487          
+                 95% CI : (0.8268, 0.9937)
+    No Information Rate : 0.5128          
+    P-Value [Acc > NIR] : 3.451e-09       
+                                          
+                  Kappa : 0.8974          
+ Mcnemar's Test P-Value : 1               
+                                          
+            Sensitivity : 0.9500          
+            Specificity : 0.9474          
+         Pos Pred Value : 0.9500          
+         Neg Pred Value : 0.9474          
+             Prevalence : 0.5128          
+         Detection Rate : 0.4872          
+   Detection Prevalence : 0.5128          
+      Balanced Accuracy : 0.9487          
+                                          
+       'Positive' Class : HighRisk        
+                                          

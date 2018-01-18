@@ -1,0 +1,91 @@
+jumlah data uji ke- 9 = 19
+jumlah data latih ke- 9 = 177
+jumlah setiap kelas pada data uji ke- 9 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	7
+"2"	"LowRisk"	12
+jumlah setiap kelas pada data latih ke- 9 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	91
+"2"	"LowRisk"	86
+Pohon Keputusan ke- 9
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+
+Classification Tree
+Number of samples: 177 
+Number of predictors: 15 
+
+Tree size: 13 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sat Mar 04 20:16:59 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 177 cases (16 attributes) from undefined.data
+
+Decision tree:
+
+MAT100 in {BC,C,D,E}:
+:...EKO100 in {B,BC,C,D,E}: HighRisk (68/2)
+:   EKO100 in {A,AB}:
+:   :...IPB107 in {A,B,BC,C,D}: LowRisk (5/1)
+:       IPB107 = AB: HighRisk (2)
+MAT100 in {A,AB,B}:
+:...MAT103 = E: LowRisk (0)
+    MAT103 in {A,AB,B}:
+    :...EKO100 in {A,AB,B,BC,D,E}: LowRisk (73/2)
+    :   EKO100 = C: HighRisk (2)
+    MAT103 in {BC,C,D}:
+    :...KOM201 in {B,BC,C,D}: HighRisk (10)
+        KOM201 = A:
+        :...KIM101 in {B,C}: LowRisk (4)
+        :   KIM101 in {A,AB,BC,D,E}: HighRisk (5)
+        KOM201 = AB:
+        :...KPM130 in {A,BC,D}: LowRisk (2)
+            KPM130 in {B,C}: HighRisk (2)
+            KPM130 = AB:
+            :...MAT100 = AB: HighRisk (1)
+                MAT100 in {A,B}: LowRisk (3)
+
+
+Evaluation on training data (177 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    12    5( 2.8%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	    88     3    (a): class HighRisk
+	     2    84    (b): class LowRisk
+
+
+	Attribute usage:
+
+	100.00%	MAT100
+	 84.75%	EKO100
+	 57.63%	MAT103
+	 15.25%	KOM201
+	  5.08%	KIM101
+	  4.52%	KPM130
+	  3.95%	IPB107
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+akurasi pada k ke- 	9	: 	78.95
+Confusion Matrix dan akurasi ke- 9
+          
+predict    HighRisk LowRisk
+  HighRisk        5       2
+  LowRisk         2      10

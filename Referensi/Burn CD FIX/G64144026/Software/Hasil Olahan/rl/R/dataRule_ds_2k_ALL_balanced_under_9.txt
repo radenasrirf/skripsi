@@ -1,0 +1,157 @@
+Pohon Keputusan ke- 9
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+
+Rule-Based Model
+Number of samples: 177 
+Number of predictors: 15 
+
+Number of Rules: 7 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sat Mar 04 20:17:00 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 177 cases (16 attributes) from undefined.data
+
+Rules:
+
+Rule 1: (68/2, lift 1.9)
+	MAT100 in {BC, C, D, E}
+	EKO100 in {B, BC, C, D, E}
+	->  class HighRisk  [0.957]
+
+Rule 2: (29/1, lift 1.8)
+	EKO100 = C
+	->  class HighRisk  [0.935]
+
+Rule 3: (90/15, lift 1.6)
+	MAT103 in {BC, C, D}
+	->  class HighRisk  [0.826]
+
+Rule 4: (73/2, lift 2.0)
+	MAT100 in {A, AB, B}
+	EKO100 in {A, AB, B, BC}
+	MAT103 in {A, AB, B}
+	->  class LowRisk  [0.960]
+
+Rule 5: (20, lift 2.0)
+	MAT100 in {A, AB, B}
+	KIM101 in {B, C}
+	KOM201 = A
+	->  class LowRisk  [0.955]
+
+Rule 6: (9, lift 1.9)
+	KPM130 = A
+	MAT100 in {A, AB, B}
+	KOM201 = AB
+	->  class LowRisk  [0.909]
+
+Rule 7: (8, lift 1.9)
+	KPM130 = AB
+	MAT100 in {A, B}
+	KOM201 = AB
+	->  class LowRisk  [0.900]
+
+Default class: HighRisk
+
+
+Evaluation on training data (177 cases):
+
+	        Rules     
+	  ----------------
+	    No      Errors
+
+	     7    8( 4.5%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	    89     2    (a): class HighRisk
+	     6    80    (b): class LowRisk
+
+
+	Attribute usage:
+
+	 92.09%	MAT103
+	 84.75%	MAT100
+	 81.92%	EKO100
+	 20.90%	KOM201
+	 11.30%	KIM101
+	  9.60%	KPM130
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+akurasi pada k ke- 	9	: 	78.95
+Confusion Matrix dan akurasi ke- 9
+           
+predictRule HighRisk LowRisk
+   HighRisk        6       3
+   LowRisk         1       9
+PostResample TREE ke- 9
+ Accuracy     Kappa 
+0.7894737 0.5476190 
+PostResample RULE ke- 9
+ Accuracy     Kappa 
+0.7894737 0.5730337 
+Confusion Matrix TREE ke- 9
+Confusion Matrix and Statistics
+
+          Reference
+Prediction HighRisk LowRisk
+  HighRisk        5       2
+  LowRisk         2      10
+                                          
+               Accuracy : 0.7895          
+                 95% CI : (0.5443, 0.9395)
+    No Information Rate : 0.6316          
+    P-Value [Acc > NIR] : 0.1149          
+                                          
+                  Kappa : 0.5476          
+ Mcnemar's Test P-Value : 1.0000          
+                                          
+            Sensitivity : 0.7143          
+            Specificity : 0.8333          
+         Pos Pred Value : 0.7143          
+         Neg Pred Value : 0.8333          
+             Prevalence : 0.3684          
+         Detection Rate : 0.2632          
+   Detection Prevalence : 0.3684          
+      Balanced Accuracy : 0.7738          
+                                          
+       'Positive' Class : HighRisk        
+                                          
+Confusion Matrix RULE ke- 9
+Confusion Matrix and Statistics
+
+          Reference
+Prediction HighRisk LowRisk
+  HighRisk        6       3
+  LowRisk         1       9
+                                          
+               Accuracy : 0.7895          
+                 95% CI : (0.5443, 0.9395)
+    No Information Rate : 0.6316          
+    P-Value [Acc > NIR] : 0.1149          
+                                          
+                  Kappa : 0.573           
+ Mcnemar's Test P-Value : 0.6171          
+                                          
+            Sensitivity : 0.8571          
+            Specificity : 0.7500          
+         Pos Pred Value : 0.6667          
+         Neg Pred Value : 0.9000          
+             Prevalence : 0.3684          
+         Detection Rate : 0.3158          
+   Detection Prevalence : 0.4737          
+      Balanced Accuracy : 0.8036          
+                                          
+       'Positive' Class : HighRisk        
+                                          

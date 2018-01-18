@@ -1,0 +1,141 @@
+jumlah data uji ke- 1 = 26
+jumlah data latih ke- 1 = 226
+jumlah setiap kelas pada data uji ke- 1 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	6
+"2"	"LowRisk"	10
+"3"	"MediumRisk"	10
+jumlah setiap kelas pada data latih ke- 1 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	78
+"2"	"LowRisk"	74
+"3"	"MediumRisk"	74
+Pohon Keputusan ke- 1
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+
+Classification Tree
+Number of samples: 226 
+Number of predictors: 15 
+
+Tree size: 39 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sun Mar 05 01:01:47 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 226 cases (16 attributes) from undefined.data
+
+Decision tree:
+
+MAT103 in {BC,C,D,E}:
+:...FIS100 in {A,C,D}: HighRisk (58/7)
+:   FIS100 in {AB,B,BC}:
+:   :...MAT100 = A: LowRisk (1)
+:       MAT100 in {AB,C,D,E}: HighRisk (8/1)
+:       MAT100 = BC:
+:       :...MAT103 in {BC,C}: MediumRisk (5)
+:       :   MAT103 in {D,E}: HighRisk (5)
+:       MAT100 = B:
+:       :...IPB111 in {BC,C}: HighRisk (1)
+:           IPB111 = A:
+:           :...IPB112 in {A,AB,C,D,E}: MediumRisk (4/1)
+:           :   IPB112 = B: LowRisk (1)
+:           IPB111 = AB:
+:           :...IPB106 in {A,B,BC,C}: HighRisk (4)
+:           :   IPB106 = AB: MediumRisk (1)
+:           IPB111 = B:
+:           :...IPB100 in {A,C}: HighRisk (3/1)
+:               IPB100 in {AB,B,BC,D}: MediumRisk (3)
+MAT103 in {A,AB,B}:
+:...EKO100 in {D,E}: LowRisk (0)
+    EKO100 = C:
+    :...MAT103 = AB: MediumRisk (1)
+    :   MAT103 in {A,B}: HighRisk (4)
+    EKO100 in {A,AB,B,BC}:
+    :...IPB106 = C: LowRisk (0)
+        IPB106 = B: MediumRisk (13/1)
+        IPB106 in {A,AB,BC}:
+        :...FIS100 = C: MediumRisk (2)
+            FIS100 = D: HighRisk (1)
+            FIS100 = A:
+            :...KOM201 in {A,B,BC,C,D}: LowRisk (16)
+            :   KOM201 = AB:
+            :   :...EKO100 in {A,AB,BC}: LowRisk (2)
+            :       EKO100 = B: MediumRisk (2)
+            FIS100 = AB:
+            :...MAT103 in {A,AB}:
+            :   :...IPB112 in {A,B,C,D,E}: LowRisk (36/8)
+            :   :   IPB112 = AB: MediumRisk (2)
+            :   MAT103 = B:
+            :   :...IPB106 in {A,BC}: MediumRisk (5)
+            :       IPB106 = AB: LowRisk (3/1)
+            FIS100 = BC:
+            :...IPB106 in {AB,BC}: MediumRisk (4)
+            :   IPB106 = A:
+            :   :...MAT100 in {A,AB,BC,D,E}: LowRisk (7)
+            :       MAT100 in {B,C}: MediumRisk (5)
+            FIS100 = B:
+            :...BIO100 in {AB,BC,E}: LowRisk (9/1)
+                BIO100 = D: MediumRisk (1)
+                BIO100 = B:
+                :...MAT103 in {A,B}: MediumRisk (5/1)
+                :   MAT103 = AB: LowRisk (3)
+                BIO100 = C:
+                :...KPM130 = A: MediumRisk (2)
+                :   KPM130 in {AB,B,BC,C,D}: HighRisk (2)
+                BIO100 = A:
+                :...IPB107 in {AB,BC,C,D}: MediumRisk (0)
+                    IPB107 = B: HighRisk (1)
+                    IPB107 = A:
+                    :...IPB111 in {A,AB,BC,C}: MediumRisk (4)
+                        IPB111 = B: LowRisk (2)
+
+
+Evaluation on training data (226 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    36   22( 9.7%)   <<
+
+
+	   (a)   (b)   (c)    <-classified as
+	  ----  ----  ----
+	    78                (a): class HighRisk
+	     1    70     3    (b): class LowRisk
+	     8    10    56    (c): class MediumRisk
+
+
+	Attribute usage:
+
+	100.00%	MAT103
+	 92.04%	FIS100
+	 58.41%	EKO100
+	 58.41%	IPB106
+	 21.24%	MAT100
+	 19.03%	IPB112
+	 12.83%	BIO100
+	 10.18%	IPB111
+	  8.85%	KOM201
+	  3.10%	IPB107
+	  2.65%	IPB100
+	  1.77%	KPM130
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+akurasi pada k ke- 	1	: 	80.77
+Confusion Matrix dan akurasi ke- 1
+            
+predict      HighRisk LowRisk MediumRisk
+  HighRisk          6       1          1
+  LowRisk           0       8          2
+  MediumRisk        0       1          7

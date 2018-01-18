@@ -1,0 +1,99 @@
+jumlah data uji ke- 3 = 39
+jumlah data latih ke- 3 = 351
+jumlah setiap kelas pada data uji ke- 3 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	19
+"2"	"LowRisk"	20
+jumlah setiap kelas pada data latih ke- 3 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	176
+"2"	"LowRisk"	175
+Pohon Keputusan ke- 3
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+
+Classification Tree
+Number of samples: 351 
+Number of predictors: 15 
+
+Tree size: 16 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sat Mar 04 20:15:32 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 351 cases (16 attributes) from undefined.data
+
+Decision tree:
+
+FIS100 in {C,D,E}: HighRisk (124/10)
+FIS100 in {A,AB,B,BC}:
+:...MAT100 in {D,E}: LowRisk (0)
+    MAT100 in {A,AB}:
+    :...KOM201 in {A,AB,B,BC,C}: LowRisk (106/4)
+    :   KOM201 = D: HighRisk (3)
+    MAT100 in {B,BC,C}:
+    :...BIO100 in {C,D,E}:
+        :...IPB111 in {A,BC,C}: HighRisk (8)
+        :   IPB111 = AB:
+        :   :...IPB108 in {A,AB,C,D}: LowRisk (8)
+        :   :   IPB108 in {B,BC}: HighRisk (6)
+        :   IPB111 = B:
+        :   :...IPB100 in {AB,B,BC}: LowRisk (3)
+        :       IPB100 in {A,C,D}: HighRisk (18)
+        BIO100 in {A,AB,B,BC}:
+        :...AGB100 = B: HighRisk (7)
+            AGB100 in {A,AB}:
+            :...MAT103 in {A,AB,C,E}: LowRisk (31/3)
+                MAT103 = D: HighRisk (3)
+                MAT103 = B:
+                :...EKO100 in {A,AB,BC,D,E}: LowRisk (9)
+                :   EKO100 in {B,C}: HighRisk (5/1)
+                MAT103 = BC:
+                :...FIS100 = AB: HighRisk (6/1)
+                    FIS100 in {A,B,BC}: LowRisk (14/1)
+
+
+Evaluation on training data (351 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    15   20( 5.7%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	   168     8    (a): class HighRisk
+	    12   163    (b): class LowRisk
+
+
+	Attribute usage:
+
+	100.00%	FIS100
+	 64.67%	MAT100
+	 33.62%	BIO100
+	 31.05%	KOM201
+	 21.37%	AGB100
+	 19.37%	MAT103
+	 12.25%	IPB111
+	  5.98%	IPB100
+	  3.99%	IPB108
+	  3.99%	EKO100
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+akurasi pada k ke- 	3	: 	89.74
+Confusion Matrix dan akurasi ke- 3
+          
+predict    HighRisk LowRisk
+  HighRisk       17       2
+  LowRisk         2      18

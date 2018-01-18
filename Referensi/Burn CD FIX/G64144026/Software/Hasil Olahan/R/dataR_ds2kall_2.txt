@@ -1,0 +1,76 @@
+jumlah data uji ke- 2 = 29
+jumlah data latih ke- 2 = 264
+jumlah setiap kelas pada data uji ke- 2 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	13
+"2"	"LowRisk"	16
+jumlah setiap kelas pada data latih ke- 2 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	85
+"2"	"LowRisk"	179
+Pohon Keputusan ke- 2
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+
+Classification Tree
+Number of samples: 264 
+Number of predictors: 15 
+
+Tree size: 6 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sat Mar 04 20:13:30 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 264 cases (16 attributes) from undefined.data
+
+Decision tree:
+
+FIS100 in {C,D,E}: HighRisk (66/10)
+FIS100 in {A,AB,B,BC}:
+:...EKO100 = E: LowRisk (0)
+    EKO100 in {C,D}: HighRisk (14/4)
+    EKO100 in {A,AB,B,BC}:
+    :...MAT103 in {A,AB,B,E}: LowRisk (151/8)
+        MAT103 in {BC,C,D}:
+        :...MAT100 in {A,B,BC,D,E}: LowRisk (28/6)
+            MAT100 in {AB,C}: HighRisk (5)
+
+
+Evaluation on training data (264 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	     5   28(10.6%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	    71    14    (a): class HighRisk
+	    14   165    (b): class LowRisk
+
+
+	Attribute usage:
+
+	100.00%	FIS100
+	 75.00%	EKO100
+	 69.70%	MAT103
+	 12.50%	MAT100
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+akurasi pada k ke- 	2	: 	79.31
+Confusion Matrix dan akurasi ke- 2
+          
+predict    HighRisk LowRisk
+  HighRisk        9       2
+  LowRisk         4      14

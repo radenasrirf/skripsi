@@ -1,0 +1,83 @@
+%----------------------------------------------------------------------------------------
+%	METODE
+%----------------------------------------------------------------------------------------
+\section*{HASIL DAN PEMBAHASAN}
+Penelitian ini berfokus pada pengembangan sistem formulasi yang sudah dikembangkan oleh Rahman (Rahman 2017). Fokus pengembangan sistem ini berada pada jenis ternak yang lebih beragam, nilai kebutuhan nutrisi yang dapat diatur untuk dijadikan \textit{constraint }serta nilai minimum atau maksimum jumlah pakan yang akan digunakan untuk formulasi. Sistem formulasi ransum ini diberi nama Dairy Feed (DF). Metode \textit{prototyping }memungkinkan pengembangan memiliki iterasi lebih dari satu kali. Pada pengembangan sistem formulasi ransum memiliki 2 iterasi. Iterasi pertama berhasil menerapkan \textit{linier programming }pada sistem dan memiliki nilai akurasi 100\% jika dibandingkan dengan aplikasi POM QM. Iterasi kedua berhasil mengembangkan sistem yang dapat dilakukan untuk formulasi dan sesuai dengan pengetahuan yang diadopsi dari pakar. Iterasi kedua memiliki rata-rata kesalahan 0.81\% jika dibandingkan dengan aplikasi WinFeed.
+
+\subsection*{Iterasi 1}
+\subsubsection*{Komunikasi}
+Komunikasi berguna sebagai sarana penggalian informasi. Komunikasi dilakukan antara pengembang sistem dengan pakar sebagai narasumber. Pada tahap ini narasumber menginformasikan tahapan dalam melakukan formulasi ransum secara manual. Informasi yang dijabarkan oleh narasumber mencakup tahapan dalam formulasi, data yang dibutuhkan dan penjelasan setiap variabel pada hasil yang didapatkan. Pada tahap ini melakukan evaluasi terhadap sistem yang telah dikembangkan oleh Rahman. Narasumber melakukan formulasi menggunakan sistem yang telah dikembangkan kemudian menjabarkan user experience yang didapatkan. Narasumber menjabarkan kebutuhan dalam melakukan formulasi yang belum diakomodir pada sistem sebelumnya. Hasil dari komunikasi adalah daftar kebutuhan pengguna yang dapat dilihat pada Tabel 1.
+
+\subsubsection*{Perencanaan Cepat} 
+Perencanaan cepat sistem formulasi ransum berdasarkan daftar kebutuhan pengguna yang telah diperoleh. Pada perencanaan cepat memiliki 2 aktor yang akan menggunakan sistem yaitu admin sebagai pengelola data master dan pengunjung yang akan melakukan formulasi pada sistem. Aktivitas yang dapat dilakukan oleh masing-masing aktor dapat dilihat melalui diagram use case pada Gambar \ref{fig:usecase1}. Perencanaan cepat juga menghasilkan diagram relasi antar tabel sebagai acuan alur data dan keterhubungan antar data. Diagram data model dapat dilihat pada Gambar \ref{fig:erd1}.
+
+\subsubsection*{Pemodelan Cepat}
+Penerapan linier programming pada sistem formulasi dapat menggunakan 5 bahan pakan yang dapat dilihat pada Tabel 2 dengan kebutuhan nutrien yang dapat dilihat pada Tabel 3.
+
+\begin{table}[h!]
+	\centering
+	\caption{Kandungan nutrien dan harga pakan}
+	\label{my-label}
+	\begin{tabular}{p{2cm}p{0.75cm}p{0.75cm}p{0.75cm}p{0.75cm}p{1cm}}
+		\hline
+		Bahan Pakan          & BK (\%) & TDN (\%) & Ca (\%) & P (\%) & Harga (Rp) \\ \hline
+		Onggok               & 79.8    & 78.3     & 0.26    & 0.16   & 2200          \\ 
+		Jagung               & 86.8    & 80.8     & 0.23    & 0.41   & 3000          \\ 
+		Dedak padi halus     & 87.7    & 67.9     & 0.09    & 1.39   & 1800          \\ 
+		Bungkil kelapa sawit & 90.3    & 79       & 0.16    & 0.62   & 1400          \\ 
+		Kapur                & 99      & 0        & 38      & 0      & 500           \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\caption{Kebutuhan nutrien ternak}
+	\label{my-label}
+	\begin{tabular}{p{2cm}p{0.75cm}p{0.75cm}p{0.75cm}p{0.75cm}p{1cm}}
+		\hline
+		Kebutuhan Nutrien & BK (Kg) & TDN (\%) & Ca (\%) & P (\%) \\ \hline
+		Minimum           & 86      & 70       & 0.6     & 0.7    \\
+		Maksimum          & 100     & 100      & 1       & 1      \\ \hline
+	\end{tabular}
+\end{table}
+
+Tabel 2 dan 3 digunakan untuk menyusun formula menggunakan metode linear programming dengan model matematika misal x1 adalah onggok, x2 adalah jagung, x3 adalah dedak padi halus, x4 adalah bungkil kelapa sawit, dan x5 adalah kapur dengan fungsi tujuan meminimumkan harga pada persamaan dibawah ini.
+
+\begin{figure}[h!] % Gunakan \begin{figure*} untuk memasukkan Gambar
+	\includegraphics[width=290pt]{Perhitungan.PNG}
+\end{figure}
+
+Sehingga hasil dari penerapan linier programming diatas menggunakan aplikasi POM QM dapat dilihat pada Gambar 4.
+
+\subsubsection*{Pembuatan Prototype}
+Pembuatan \textit{prototype }diimplementasikan pada pemrograman PHP menggunakan Framework Laravel 5.3. Fungsional sistem yang dikembangkan pada \textit{prototype }sesuai dengan hasil analisis pada perencanaan cepat dan pemodelan cepat. Terdapat 5 fungsionalitas yang berhasil dikembangkan pada \textit{prototype }pertama. Fungsionalitas tersebut adalah penerapan linier programming pada formulasi, pengelolaan data pakan, pengelolaan data ternak, informasi data pakan dan informasi data ternak. Fungsi formulasi dapat digunakan oleh pengguna untuk merancang ransum yang memenuhi kebutuhan ternak dengan harga minumum. Pada fungsi formulasi pengguna dapat mengatur kebutuhan nutrisi ternak dan kuantitas pakan yang digunakan yang dapat dilihat pada Gambar 5. Hasil penghitungan formulasi melalui sistem dapat dilihat pada Gambar 6. Pengelolaan data pakan dan ternak dapat dilakukan oleh admin. Data ini berfungsi sebagai data master yang akan dijadikan nilai koefisien pada kendala dalam penghitungan linier programming. Informasi data pakan dan ternak berguna untuk pengguna sebagai bahan pertimbangan dalam memilih pakan yang akan digunakan.
+
+\subsubsection*{Deployment Delivery dan Feedback}
+Pada tahap deployment pengembang melakukan testing hasil formulasi dengan perbandingan antara sistem formulasi dengan program WinFeed 2.8. Jenis dan harga bahan pakan serta batasan penggunaannya dapat dilihat pada Tabel 4. Batasan kebutuhan nutrien dapat dilihat pada Tabel 5. Hasil dari formulasi dapat dilihat pada Tabel 6. Nilai nutrien yang terpenuhi dari hasil formulasi dapat dilihat pada Tabel 7.
+
+Pada tahap feedback dilakukan pertemuan antara pengembang sistem dengan pakar sebagai narasumber. Pengembang menjelaskan fungsional yang telah dikembangkan pada sistem, penggunaannya dan penjelasan informasi lainnya. Setelah penjelasan selesai dijabarkan oleh pengembang, narasumber mencoba seluruh kebutuhan fungsional yang telah dikembangkan. Pada waktu yang bersamaan narasumber memberikan feedback atau pengalaman user experience yang didapatkannya dalam menggunakan sistem. Hasil dari feedback pada tahap iterasi 1 akan dijadikan bahan untuk melakukan komunikasi lanjut pada tahap iterasi 2.
+
+\subsection*{Iterasi 2}
+\subsubsection*{Komunikasi}
+Komunikasi pada iterasi ke-2 membahas mengenai hasi evaluasi pada tahap feedback iterasi 1. Feedback iterasi 1 dibahas lebih lanjut dan didokumentasikan melalui daftar kebutuhan pengguna yang dapat dilihat pada Tabel 8.
+
+\subsubsection*{Perencanaan Cepat} 
+Perencanaan cepat pada iterasi ke-2 menghasilkan aktivitas baru pada diagram use case dan menambah beberapa tabel pada diagram relasi antar tabel. Aktivitas tersebut adalah pengguna dapat menyimpan hasil formulasi dan dapat melakukan registrasi. Use case pada iterasi 2 dapat dilihat pada Gambar 7. Diagram relasi antar tabel dapat dilihat pada Gambar 8.
+
+\subsubsection*{Pemodelan Cepat}
+Pemodelan cepat pada iterasi 2 berfokus pada penghitungan formulasi berdasarkan bahan kering dan hasil berdasarkan bahan segar. Bahan kering digunakan dalam penghitungan berfungsi untuk menghilangkan kandungan air pada bahan segar. Sedangkan penggunaan bahan segar sebagai hasil berguna untuk memudahkan pengguna atau peternak dalam meracik ransum. Sehingga nilai konstanta yang digunakan dalam fungsi tujuan adalah
+\\
+Cn = \dfrac{100}{nilaiBK_{n}} X hargaBS_{n}\\
+
+Fungsi tujuan untuk meminimumkan harga ransum berubah menjadi:\\
+
+Z=2756.89x_1+3456.22x_2+2052.45x_3+2214.83x_4+505.05x_5
+
+\\
+Sehingga hasil dari linier programming diatas menggunakan aplikasi POM QM dapat dilihat pada Gambar 9.
+
+\subsubsection*{Pembuatan Prototype}
+\textit{Prototype }berhasil dikembangkan pada iterasi 2 dan menghasilkan sebuah fungsional baru yang dapat digunakan oleh pengguna. Pengguna dapat menyimpan hasil formulasi dan mengaksesnya kembali yang dapat dilihat pada Gambar 10. Pengguna juga dapat mencetak hasil formulasi guna mempermudah dalam pengerjaan dilapangan.
+
+\subsubsection*{Deployment Delivery dan Feedback}
+Tahap deployment pada iterasi 2 dilakukan pengujian kembali hasil formulasi dengan perbandingan antara sistem formulasi dengan program WinFeed 2.8. Pengujian dilakukan sebanyak 2 kali percobaan. Jenis dan harga bahan pakan serta batasan penggunaannya dapat dilihat pada Tabel 9. Batasan kebutuhan nutrisi dapat dilihat pada Tabel 10. Hasil dari formulasi dapat dilihat pada Tabel 11. Nilai nutrien pada hasil formulasi dapat dilihat pada Tabel 12. Tampilan antar muka hasil sistem formulasi dapat dilihat pada Gambar 11. Hasil penghitungan dengan nilai masukkan yang sama menggunakan aplikasi WinFeed dapat dilihat pada Gambar 12. Pengujian juga dilakukan terhadap fungsional sistem menggunakan metode black-box testing. Fungsi yang telah dikembangkan diuji dengan menguji input dan output untuk menentukan keberhasilan sistem yang telah dibuat. Hasil dari pengujian dapat dilihat pada Tabel 13. Tahap \textit{delivery }dan \textit{feedback }pada iterasi 2 melibatkan beberapa pengguna untuk menggunakan sistem dan memberikan \textit{feedback }melalui kuesioner dan penjabaran \textit{user experience }yang didapatkannya. Terdapat 194 jumlah pengguna yang menggunakan sistem dan mengisi kuesioner dengan jenis pekerjaan yang terdiri dari 99\% mahasiswa, 0.5\% peternak dan 0.5\% praktisi. Jenis pertanyaan dan respon pengguna pada kuesioner dapat dilihat pada Lampiran 1. Berdasarkan pada \textit{feedback }yang diberikan oleh pengguna dan pakar pengujian dan evaluasi pada iterasi ke-2 menyatakan sistem sudah memenuhi kebutuhan pengguna dalam melakukan formulasi ransum.

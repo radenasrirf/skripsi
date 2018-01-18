@@ -1,0 +1,131 @@
+jumlah data uji ke- 1 = 30
+jumlah data latih ke- 1 = 263
+jumlah setiap kelas pada data uji ke- 1 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	11
+"2"	"LowRisk"	8
+"3"	"MediumRisk"	11
+jumlah setiap kelas pada data latih ke- 1 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	89
+"2"	"LowRisk"	76
+"3"	"MediumRisk"	98
+Pohon Keputusan ke- 1
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+
+Classification Tree
+Number of samples: 263 
+Number of predictors: 15 
+
+Tree size: 33 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sun Mar 05 00:59:19 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 263 cases (16 attributes) from undefined.data
+
+Decision tree:
+
+FIS100 in {C,D,E}: HighRisk (69/9)
+FIS100 in {A,AB,B,BC}:
+:...MAT103 = E: MediumRisk (0)
+    MAT103 in {C,D}: HighRisk (20/7)
+    MAT103 in {A,AB,B,BC}:
+    :...EKO100 in {B,BC,D,E}: MediumRisk (43/14)
+        EKO100 = C:
+        :...KIM101 in {A,B,BC,C,D,E}: HighRisk (7)
+        :   KIM101 = AB: MediumRisk (3)
+        EKO100 in {A,AB}:
+        :...FIS100 = A:
+            :...MAT100 in {A,AB,BC,C,D,E}: LowRisk (17)
+            :   MAT100 = B: MediumRisk (2)
+            FIS100 in {AB,B,BC}:
+            :...IPB106 = B: MediumRisk (12/2)
+                IPB106 in {BC,C}: LowRisk (1)
+                IPB106 in {A,AB}:
+                :...AGB100 in {AB,B}: LowRisk (7/1)
+                    AGB100 = A:
+                    :...KIM101 in {D,E}: LowRisk (0)
+                        KIM101 = A:
+                        :...IPB107 = A: LowRisk (5)
+                        :   IPB107 = AB: MediumRisk (2)
+                        :   IPB107 in {B,BC,C,D}: HighRisk (1)
+                        KIM101 = AB:
+                        :...IPB107 in {A,AB}: MediumRisk (14/5)
+                        :   IPB107 in {B,BC,C,D}: LowRisk (4)
+                        KIM101 = C:
+                        :...IPB112 in {A,AB,BC,C,D,E}: MediumRisk (4)
+                        :   IPB112 = B: LowRisk (1)
+                        KIM101 = BC:
+                        :...MAT103 = A: MediumRisk (4)
+                        :   MAT103 = AB: LowRisk (5/1)
+                        :   MAT103 = B:
+                        :   :...KOM201 in {A,B,BC,C,D}: MediumRisk (7/2)
+                        :   :   KOM201 = AB: LowRisk (1)
+                        :   MAT103 = BC:
+                        :   :...IPB108 = A: MediumRisk (3/1)
+                        :       IPB108 = AB: LowRisk (2)
+                        :       IPB108 in {B,BC,C,D}: HighRisk (2/1)
+                        KIM101 = B:
+                        :...IPB100 in {BC,C,D}: LowRisk (0)
+                            IPB100 = B: HighRisk (2/1)
+                            IPB100 = A:
+                            :...IPB111 in {A,B}: LowRisk (3)
+                            :   IPB111 in {AB,BC,C}: MediumRisk (6)
+                            IPB100 = AB:
+                            :...MAT100 in {A,B,BC,C,D,E}: LowRisk (11)
+                                MAT100 = AB:
+                                :...FIS100 in {AB,B}: MediumRisk (3)
+                                    FIS100 = BC: LowRisk (2)
+
+
+Evaluation on training data (263 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    30   44(16.7%)   <<
+
+
+	   (a)   (b)   (c)    <-classified as
+	  ----  ----  ----
+	    83           6    (a): class HighRisk
+	     1    57    18    (b): class LowRisk
+	    17     2    79    (c): class MediumRisk
+
+
+	Attribute usage:
+
+	100.00%	FIS100
+	 73.76%	MAT103
+	 66.16%	EKO100
+	 38.78%	IPB106
+	 34.98%	KIM101
+	 33.84%	AGB100
+	 13.31%	MAT100
+	 10.27%	IPB100
+	  9.89%	IPB107
+	  3.42%	IPB111
+	  3.04%	KOM201
+	  2.66%	IPB108
+	  1.90%	IPB112
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+akurasi pada k ke- 	1	: 	50.00
+Confusion Matrix dan akurasi ke- 1
+            
+predict      HighRisk LowRisk MediumRisk
+  HighRisk          5       1          2
+  LowRisk           1       4          3
+  MediumRisk        5       3          6

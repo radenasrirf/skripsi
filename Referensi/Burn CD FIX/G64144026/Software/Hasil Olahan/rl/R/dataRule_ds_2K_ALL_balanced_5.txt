@@ -1,0 +1,188 @@
+Pohon Keputusan ke- 5
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+
+Rule-Based Model
+Number of samples: 351 
+Number of predictors: 15 
+
+Number of Rules: 12 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sat Mar 04 20:15:37 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 351 cases (16 attributes) from undefined.data
+
+Rules:
+
+Rule 1: (29, lift 1.9)
+	IPB111 = B
+	BIO100 in {C, D}
+	IPB100 in {A, C, D}
+	->  class HighRisk  [0.968]
+
+Rule 2: (29, lift 1.9)
+	IPB112 in {B, E}
+	BIO100 in {C, D}
+	->  class HighRisk  [0.968]
+
+Rule 3: (130/7, lift 1.9)
+	FIS100 in {AB, C, D, E}
+	MAT103 in {BC, C, D, E}
+	->  class HighRisk  [0.939]
+
+Rule 4: (64/3, lift 1.9)
+	MAT103 in {D, E}
+	->  class HighRisk  [0.939]
+
+Rule 5: (9, lift 1.8)
+	IPB108 = AB
+	KPM130 = B
+	MAT103 in {BC, C, D}
+	->  class HighRisk  [0.909]
+
+Rule 6: (6, lift 1.7)
+	IPB111 = A
+	BIO100 in {C, D}
+	->  class HighRisk  [0.875]
+
+Rule 7: (11/1, lift 1.7)
+	AGB100 = B
+	MAT103 in {C, D}
+	->  class HighRisk  [0.846]
+
+Rule 8: (131/3, lift 2.0)
+	BIO100 in {A, AB, B, BC}
+	EKO100 in {A, AB, B, BC}
+	MAT103 in {A, AB, B}
+	->  class LowRisk  [0.970]
+
+Rule 9: (73/3, lift 1.9)
+	IPB111 in {AB, BC, C}
+	IPB112 in {A, AB, BC}
+	MAT103 in {A, AB, B}
+	->  class LowRisk  [0.947]
+
+Rule 10: (10, lift 1.9)
+	FIS100 in {B, BC}
+	KPM130 = A
+	MAT103 in {BC, C}
+	->  class LowRisk  [0.917]
+
+Rule 11: (21/1, lift 1.9)
+	IPB111 = B
+	IPB100 in {AB, B, BC}
+	MAT103 in {A, AB, B}
+	->  class LowRisk  [0.913]
+
+Rule 12: (134/50, lift 1.3)
+	FIS100 in {B, BC}
+	->  class LowRisk  [0.625]
+
+Default class: HighRisk
+
+
+Evaluation on training data (351 cases):
+
+	        Rules     
+	  ----------------
+	    No      Errors
+
+	    12   15( 4.3%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	   170     8    (a): class HighRisk
+	     7   166    (b): class LowRisk
+
+
+	Attribute usage:
+
+	 87.46%	MAT103
+	 75.21%	FIS100
+	 52.71%	BIO100
+	 37.32%	EKO100
+	 36.75%	IPB111
+	 29.06%	IPB112
+	 14.25%	IPB100
+	  5.41%	KPM130
+	  3.13%	AGB100
+	  2.56%	IPB108
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+akurasi pada k ke- 	5	: 	79.49
+Confusion Matrix dan akurasi ke- 5
+           
+predictRule HighRisk LowRisk
+   HighRisk       14       5
+   LowRisk         3      17
+PostResample TREE ke- 5
+ Accuracy     Kappa 
+0.7948718 0.5883905 
+PostResample RULE ke- 5
+ Accuracy     Kappa 
+0.7948718 0.5883905 
+Confusion Matrix TREE ke- 5
+Confusion Matrix and Statistics
+
+          Reference
+Prediction HighRisk LowRisk
+  HighRisk       14       5
+  LowRisk         3      17
+                                         
+               Accuracy : 0.7949         
+                 95% CI : (0.6354, 0.907)
+    No Information Rate : 0.5641         
+    P-Value [Acc > NIR] : 0.002258       
+                                         
+                  Kappa : 0.5884         
+ Mcnemar's Test P-Value : 0.723674       
+                                         
+            Sensitivity : 0.8235         
+            Specificity : 0.7727         
+         Pos Pred Value : 0.7368         
+         Neg Pred Value : 0.8500         
+             Prevalence : 0.4359         
+         Detection Rate : 0.3590         
+   Detection Prevalence : 0.4872         
+      Balanced Accuracy : 0.7981         
+                                         
+       'Positive' Class : HighRisk       
+                                         
+Confusion Matrix RULE ke- 5
+Confusion Matrix and Statistics
+
+          Reference
+Prediction HighRisk LowRisk
+  HighRisk       14       5
+  LowRisk         3      17
+                                         
+               Accuracy : 0.7949         
+                 95% CI : (0.6354, 0.907)
+    No Information Rate : 0.5641         
+    P-Value [Acc > NIR] : 0.002258       
+                                         
+                  Kappa : 0.5884         
+ Mcnemar's Test P-Value : 0.723674       
+                                         
+            Sensitivity : 0.8235         
+            Specificity : 0.7727         
+         Pos Pred Value : 0.7368         
+         Neg Pred Value : 0.8500         
+             Prevalence : 0.4359         
+         Detection Rate : 0.3590         
+   Detection Prevalence : 0.4872         
+      Balanced Accuracy : 0.7981         
+                                         
+       'Positive' Class : HighRisk       
+                                         

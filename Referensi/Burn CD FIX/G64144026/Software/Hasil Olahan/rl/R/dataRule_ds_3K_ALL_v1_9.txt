@@ -1,0 +1,137 @@
+Pohon Keputusan ke- 9
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+
+Rule-Based Model
+Number of samples: 264 
+Number of predictors: 15 
+
+Number of Rules: 3 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sun Mar 05 00:56:45 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 264 cases (16 attributes) from undefined.data
+
+Rules:
+
+Rule 1: (181/22, lift 1.3)
+	FIS100 in {A, AB, B, BC}
+	EKO100 in {A, AB, B, BC}
+	->  class LowRisk  [0.874]
+
+Rule 2: (69/22, lift 2.4)
+	FIS100 in {C, D, E}
+	->  class MediumRisk  [0.676]
+
+Rule 3: (37/15, lift 2.1)
+	EKO100 = C
+	->  class MediumRisk  [0.590]
+
+Default class: LowRisk
+
+
+Evaluation on training data (264 cases):
+
+	        Rules     
+	  ----------------
+	    No      Errors
+
+	     3   51(19.3%)   <<
+
+
+	   (a)   (b)   (c)    <-classified as
+	  ----  ----  ----
+	           1    16    (a): class HighRisk
+	         159    13    (b): class LowRisk
+	          21    54    (c): class MediumRisk
+
+
+	Attribute usage:
+
+	 94.70%	FIS100
+	 82.58%	EKO100
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+akurasi pada k ke- 	9	: 	86.21
+Confusion Matrix dan akurasi ke- 9
+            
+predictRule  HighRisk LowRisk MediumRisk
+  HighRisk          0       0          0
+  LowRisk           0      21          2
+  MediumRisk        0       2          4
+PostResample TREE ke- 9
+ Accuracy     Kappa 
+0.8620690 0.5797101 
+PostResample RULE ke- 9
+ Accuracy     Kappa 
+0.8620690 0.5797101 
+Confusion Matrix TREE ke- 9
+Confusion Matrix and Statistics
+
+            Reference
+Prediction   HighRisk LowRisk MediumRisk
+  HighRisk          0       0          0
+  LowRisk           0      21          2
+  MediumRisk        0       2          4
+
+Overall Statistics
+                                          
+               Accuracy : 0.8621          
+                 95% CI : (0.6834, 0.9611)
+    No Information Rate : 0.7931          
+    P-Value [Acc > NIR] : 0.2541          
+                                          
+                  Kappa : 0.5797          
+ Mcnemar's Test P-Value : NA              
+
+Statistics by Class:
+
+                     Class: HighRisk Class: LowRisk Class: MediumRisk
+Sensitivity                       NA         0.9130            0.6667
+Specificity                        1         0.6667            0.9130
+Pos Pred Value                    NA         0.9130            0.6667
+Neg Pred Value                    NA         0.6667            0.9130
+Prevalence                         0         0.7931            0.2069
+Detection Rate                     0         0.7241            0.1379
+Detection Prevalence               0         0.7931            0.2069
+Balanced Accuracy                 NA         0.7899            0.7899
+Confusion Matrix RULE ke- 9
+Confusion Matrix and Statistics
+
+            Reference
+Prediction   HighRisk LowRisk MediumRisk
+  HighRisk          0       0          0
+  LowRisk           0      21          2
+  MediumRisk        0       2          4
+
+Overall Statistics
+                                          
+               Accuracy : 0.8621          
+                 95% CI : (0.6834, 0.9611)
+    No Information Rate : 0.7931          
+    P-Value [Acc > NIR] : 0.2541          
+                                          
+                  Kappa : 0.5797          
+ Mcnemar's Test P-Value : NA              
+
+Statistics by Class:
+
+                     Class: HighRisk Class: LowRisk Class: MediumRisk
+Sensitivity                       NA         0.9130            0.6667
+Specificity                        1         0.6667            0.9130
+Pos Pred Value                    NA         0.9130            0.6667
+Neg Pred Value                    NA         0.6667            0.9130
+Prevalence                         0         0.7931            0.2069
+Detection Rate                     0         0.7241            0.1379
+Detection Prevalence               0         0.7931            0.2069
+Balanced Accuracy                 NA         0.7899            0.7899

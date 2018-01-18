@@ -1,0 +1,93 @@
+jumlah data uji ke- 6 = 39
+jumlah data latih ke- 6 = 351
+jumlah setiap kelas pada data uji ke- 6 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	14
+"2"	"LowRisk"	25
+jumlah setiap kelas pada data latih ke- 6 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	181
+"2"	"LowRisk"	170
+Pohon Keputusan ke- 6
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+
+Classification Tree
+Number of samples: 351 
+Number of predictors: 15 
+
+Tree size: 13 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sat Mar 04 20:15:39 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 351 cases (16 attributes) from undefined.data
+
+Decision tree:
+
+MAT103 in {A,AB,B}:
+:...IPB100 in {A,AB,B,BC}: LowRisk (133/8)
+:   IPB100 in {C,D}:
+:   :...IPB111 in {B,BC,C}: HighRisk (13)
+:       IPB111 in {A,AB}:
+:       :...IPB108 in {AB,BC,C,D}: LowRisk (0)
+:           IPB108 = B: HighRisk (5/1)
+:           IPB108 = A:
+:           :...KIM101 in {A,AB,BC,C,D,E}: LowRisk (12)
+:               KIM101 = B: HighRisk (4/1)
+MAT103 in {BC,C,D,E}:
+:...FIS100 in {A,C,D,E}: HighRisk (123/7)
+    FIS100 in {AB,B,BC}:
+    :...MAT100 in {AB,C,D,E}: HighRisk (24/2)
+        MAT100 in {A,B,BC}:
+        :...FIS100 = B: LowRisk (12/1)
+            FIS100 in {AB,BC}:
+            :...EKO100 in {A,C,D,E}: HighRisk (12/2)
+                EKO100 in {AB,BC}: LowRisk (8/1)
+                EKO100 = B:
+                :...IPB108 = A: LowRisk (2)
+                    IPB108 in {AB,B,BC,C,D}: HighRisk (3)
+
+
+Evaluation on training data (351 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    12   23( 6.6%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	   171    10    (a): class HighRisk
+	    13   157    (b): class LowRisk
+
+
+	Attribute usage:
+
+	100.00%	MAT103
+	 52.42%	FIS100
+	 47.58%	IPB100
+	 17.38%	MAT100
+	  9.69%	IPB111
+	  7.41%	IPB108
+	  7.12%	EKO100
+	  4.56%	KIM101
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+akurasi pada k ke- 	6	: 	84.62
+Confusion Matrix dan akurasi ke- 6
+          
+predict    HighRisk LowRisk
+  HighRisk       10       2
+  LowRisk         4      23

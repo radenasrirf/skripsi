@@ -1,0 +1,153 @@
+Pohon Keputusan ke- 1
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+
+Rule-Based Model
+Number of samples: 263 
+Number of predictors: 15 
+
+Number of Rules: 7 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sat Mar 04 20:13:28 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 263 cases (16 attributes) from undefined.data
+
+Rules:
+
+Rule 1: (50/6, lift 2.6)
+	EKO100 in {C, D}
+	->  class HighRisk  [0.865]
+
+Rule 2: (61/8, lift 2.6)
+	BIO100 in {A, B, BC, C, D, E}
+	MAT103 in {C, D}
+	->  class HighRisk  [0.857]
+
+Rule 3: (69/10, lift 2.6)
+	FIS100 in {C, D, E}
+	->  class HighRisk  [0.845]
+
+Rule 4: (65/12, lift 2.4)
+	MAT103 in {C, D}
+	->  class HighRisk  [0.806]
+
+Rule 5: (37/1, lift 1.4)
+	FIS100 in {A, AB, B, BC}
+	BIO100 = AB
+	EKO100 in {A, AB, B, BC}
+	->  class LowRisk  [0.949]
+
+Rule 6: (164/8, lift 1.4)
+	FIS100 in {A, AB, B, BC}
+	EKO100 in {A, AB, B, BC}
+	MAT103 in {A, AB, B, BC}
+	->  class LowRisk  [0.946]
+
+Rule 7: (42/3, lift 1.4)
+	FIS100 in {A, AB, B, BC}
+	KIM101 = AB
+	->  class LowRisk  [0.909]
+
+Default class: LowRisk
+
+
+Evaluation on training data (263 cases):
+
+	        Rules     
+	  ----------------
+	    No      Errors
+
+	     7   21( 8.0%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	    79     8    (a): class HighRisk
+	    13   163    (b): class LowRisk
+
+
+	Attribute usage:
+
+	 92.02%	FIS100
+	 87.07%	MAT103
+	 82.89%	EKO100
+	 37.26%	BIO100
+	 15.97%	KIM101
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+akurasi pada k ke- 	1	: 	76.67
+Confusion Matrix dan akurasi ke- 1
+           
+predictRule HighRisk LowRisk
+   HighRisk        5       1
+   LowRisk         6      18
+PostResample TREE ke- 1
+ Accuracy     Kappa 
+0.7666667 0.4444444 
+PostResample RULE ke- 1
+ Accuracy     Kappa 
+0.7666667 0.4444444 
+Confusion Matrix TREE ke- 1
+Confusion Matrix and Statistics
+
+          Reference
+Prediction HighRisk LowRisk
+  HighRisk        5       1
+  LowRisk         6      18
+                                          
+               Accuracy : 0.7667          
+                 95% CI : (0.5772, 0.9007)
+    No Information Rate : 0.6333          
+    P-Value [Acc > NIR] : 0.08959         
+                                          
+                  Kappa : 0.4444          
+ Mcnemar's Test P-Value : 0.13057         
+                                          
+            Sensitivity : 0.4545          
+            Specificity : 0.9474          
+         Pos Pred Value : 0.8333          
+         Neg Pred Value : 0.7500          
+             Prevalence : 0.3667          
+         Detection Rate : 0.1667          
+   Detection Prevalence : 0.2000          
+      Balanced Accuracy : 0.7010          
+                                          
+       'Positive' Class : HighRisk        
+                                          
+Confusion Matrix RULE ke- 1
+Confusion Matrix and Statistics
+
+          Reference
+Prediction HighRisk LowRisk
+  HighRisk        5       1
+  LowRisk         6      18
+                                          
+               Accuracy : 0.7667          
+                 95% CI : (0.5772, 0.9007)
+    No Information Rate : 0.6333          
+    P-Value [Acc > NIR] : 0.08959         
+                                          
+                  Kappa : 0.4444          
+ Mcnemar's Test P-Value : 0.13057         
+                                          
+            Sensitivity : 0.4545          
+            Specificity : 0.9474          
+         Pos Pred Value : 0.8333          
+         Neg Pred Value : 0.7500          
+             Prevalence : 0.3667          
+         Detection Rate : 0.1667          
+   Detection Prevalence : 0.2000          
+      Balanced Accuracy : 0.7010          
+                                          
+       'Positive' Class : HighRisk        
+                                          

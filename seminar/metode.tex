@@ -1,0 +1,79 @@
+%----------------------------------------------------------------------------------------
+%	METODE
+%----------------------------------------------------------------------------------------
+\section*{METODE PENELITIAN}
+
+Penelitian yang dilakukan terbagi menjadi beberapa tahapan proses. Gambar \ref{fig:metodepenelitian} menunjukan tahapan proses tersebut.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=220pt]{gambar/metode_penelitian}
+	\caption{Metode Penelitian}
+	\label{fig:metodepenelitian}
+\end{figure}
+
+\subsection*{Analisis}
+
+Pada tahap ini dimulai dari membaca literatur terkait dan mendefinisikan kebutuhan dari aplikasi yang akan dibangun. Selain itu, pada tahapan ini juga dilakukan pengumpulan berapa contoh program yang akan digunakan dalam penelitian. Contoh program yang digunakan dalam penelitian ini didapatkan dari penelitian yang dilakukan oleh \citeauthor{HERMADI2015} (\cite*{HERMADI2015}).  
+
+\subsection*{Perancangan}
+Pada tahap ini ditentukan bagaimana perangkat lunak akan dibangun. Ilustrasi arsitektur sistem dapat dilihat pada Gambar \ref{fig:struktur}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=230pt]{gambar/struktur}
+	\caption{Arsitektur Sistem}
+	\label{fig:struktur}
+\end{figure}
+
+\subsubsection*{Kode Program}
+Kode program matlab akan dibaca sebagai inputan. Matlab memiliki empat struktur kontrol, yaitu IF-ELSE-END, SWITCH-CASE, FOR, dan WHILE. Kode program yang diinputkan harus sudah dipastikan dapat dijalankan jika di compile.
+
+\subsubsection*{Mengurai Kode Progam ke Format XML}
+Penguraian kode program matlab dilakukan dengan menggunakan library  MATLAB-PARSER. Ketika terdapat kesalahan pada kode program, library  ini akan mengembalikan pesan error. Lalu kode program tersebut diurai menjadi file dengan format XML menggunakan library MATLAB-PARSER yang dibuat oleh Suffos (2015). 
+Extensible Markup Language (XML) adalah bahasa yang dapat mendeskripsikan sebuah dokumen. XML memiliki banyak bagian yang tidak memiliki struktur yang pasti. XML terdiri atas dua bagian utama, yaitu elemen dan atribut. Elemen yang dapat disebut sebagai node merupakan bagian penting yang dapat menggambarkan struktur dari XML. Sedangkan atribut merupakan bagian yang dapat digunakan sebegai informasi tambahan dari setiap elemen (Hartwell 2017). 
+
+\subsubsection*{Membangkitkan \textit{Graph}}
+Setiap dalam tag file XML tersebut akan ditelusuri satu persatu yang termasuk struktur kontrol di dalam bahasa matlab. Sehingga terbentuklah sebuah objek graph yang terdiri dari sekumpulan node dan edge. 
+Salah satu cara untuk membaca dan menulis dokumen XML pada framework .NET dan C\# yaitu dengan menggunakan kelas XMLDocument yang terdapat dalam namespace System.XML. Setiap elemen XML yang merupakan struktur kontrol pada program akan menjadi nodes baru di dalam kelas graph. Setiap node berisi informasi nomor baris dan kolom yang akan digunakan untuk melakukan instrumentasi.
+
+
+\subsubsection*{Membangkitkan Jalur}
+\textit{Basis path testing} merupakan salah satu metode pengujian struktural yang menggunakan \textit{source code} dari program untuk menemukan semua jalur yang mungkin dapat dilalui program dan dapat digunakan untuk merancang data uji. Metode ini memastikan semua kemungkinan jalur dijalankan setidaknya satu kali (\cite{BASU2015}). Metode ini terbagi menjadi 4 tahapan, yaitu:
+\begin{enumerate}[noitemsep] 
+	\item Menggambarkan jalur dalam bentuk \textit{ Control Flow Graph} (CFG)
+	\item Menghitung \textit{cyclomatic complexity}
+	\item Memilih satu set jalur dasar
+	\item Membangkitkan data uji untuk setiap jalur dasar
+\end{enumerate}
+
+\subsubsection*{Menghitung \textit{Cyclometic Complexity}}
+
+\textit{Cyclomatic complexity} merupakan suatu sistem pengukuran yang ditemukan oleh \citeauthor{MCCABE} untuk menentukan banyaknya \textit{independent path} dan menunjukan tingkat kompleksitas dari suatu program. \textit{Independent path} adalah jalur yang melintas dalam program yang sekurang-kurangnya terdapat kondisi baru. Perhitungan \textit{Cyclomatic Complexity} dapat dilihat pada persamaan berikut:
+\[V(G)=E-N+2\]
+
+Dimana, E menunjukkan jumlah \textit{edges} dan N menunjukkan jumlah \textit{nodes}.
+
+\subsubsection*{Transformasi ke Dalam Format Bahasa Dot}
+Graph yang sudah terbentuk akan ditransformasikan ke dalam bentuk format bahasa permrograman dot. Bahasa dot adalah bahasa yang digunakan untuk mengambar graph berarah. Bahasa ini dapat mendeskripsikan 3 macam objek, yaitu graph, nodes, dan edges (Ganser et all 2015).
+
+\subsubsection*{Memvisualisasi \textit{Graph} dalam bentuk CFG}
+\textit{Control Flow Graph }(CFG) adalah graph berarah yang merepresentasikan aliran dari sebuah program. Setiap CFG terdiri dari \textit{nodes} dan \textit{edges}. \textit{Nodes} merepresentasikan \textit{statement} atau \textit{expressions}. Sedangkan \textit{edges} merepresentasikan transfer kontrol antar \textit{nodes} (\cite{MCCABE}). Notasi dari CFG dapat dilihat pada Gambar \ref{fig:cfg}.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=220pt]{gambar/CFG2}
+	\caption{Notasi Control Flow Graph (CFG)}
+	\label{fig:cfg}
+\end{figure}
+Setelah file dengan format bahasa dot terbentuk, CFG akan divisualisasikan dengan menggunakan library Graphviz. Graphviz merupakan perangkat lunak open source untuk visualisasi grafik. 
+
+\subsubsection*{Instrumentasi}
+Setelah jalur terbentuk, dilakukan juga proses instrumentasi. Instrumentasi merupakan sebuah proses menyisipkan sebuah penanda (tag) di awal atau di akhir setiap blok kode seperti awal setiap perintah, sebelum atau sesudah kondisi terpenuhi atau tidak. Dalam pengujian path testing, penanda ini dapat digunakan untuk memonitor jalur yang dilalui program ketika dijalankan dengan masukan data uji tertentu (Arkeman et al. 2014). 
+Instrumentasi dilakukan dengan cara menambahkan dulu variable keluaran bernama traversedPath. Variable in digunakan untuk menyimpan informasi node mana saja yang dilalui ketika diberikan inputan dengan nilai tertentu. Lalu setiap sebelum dan sesudah node percabangan, dilakukan penyisipan kode program berupa perintah untuk memasukkan nilai node yang dilalui. Sehingga ketika program tersebut dijalankan, akan menghasilkan keluaran tambahan bernama traversedPath. 
+
+\subsection*{Implementasi}
+
+Tahapan ini adalah melakukan implementasi dari tahap sebelumnya ke dalam bentuk aplikasi web. Aplikasi ini akan dibangun dengan menggunakan bahasa pemrograman C\# dan menggunakan IDE Microsoft Visual Studio Ultimate 2013. Library yang dibutuhkan adalah library MATLAB-PARSER yang dibuat oleh Suffos (2015) untuk mengurai kode program ke dalam bentuk XML dan Graphviz untuk menvisualisasi jalur ke dalam bentuk graph berarah.
+
+\subsection*{Testing}
+
+Tahapan ini adalah melakukan evaluasi dari tahapan implementasi. Evaluasi dilakukan dengan membandingkan hasil yang dikeluarkan oleh sistem dengan pembangkitan secara manual dari segi waktu eksekusi. 

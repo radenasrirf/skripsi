@@ -1,0 +1,92 @@
+jumlah data uji ke- 10 = 39
+jumlah data latih ke- 10 = 351
+jumlah setiap kelas pada data uji ke- 10 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	22
+"2"	"LowRisk"	17
+jumlah setiap kelas pada data latih ke- 10 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	173
+"2"	"LowRisk"	178
+Pohon Keputusan ke- 10
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+
+Classification Tree
+Number of samples: 351 
+Number of predictors: 15 
+
+Tree size: 13 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sat Mar 04 20:15:48 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 351 cases (16 attributes) from undefined.data
+
+Decision tree:
+
+FIS100 in {C,D,E}: HighRisk (127/10)
+FIS100 in {A,AB,B,BC}:
+:...MAT100 in {D,E}: LowRisk (0)
+    MAT100 in {A,AB}:
+    :...MAT103 in {A,AB,B,D,E}: LowRisk (102/1)
+    :   MAT103 in {BC,C}:
+    :   :...BIO100 in {AB,BC}: LowRisk (3)
+    :       BIO100 in {A,B,C,D,E}: HighRisk (4)
+    MAT100 in {B,BC,C}:
+    :...KPM130 in {A,AB}:
+        :...IPB112 in {A,AB,B,BC,D,E}: LowRisk (53/8)
+        :   IPB112 = C: HighRisk (3)
+        KPM130 in {B,BC,C,D}:
+        :...IPB108 in {AB,B,C,D}: HighRisk (20)
+            IPB108 = BC: LowRisk (1)
+            IPB108 = A:
+            :...IPB106 in {BC,C}: HighRisk (0)
+                IPB106 = A: LowRisk (21/5)
+                IPB106 in {AB,B}:
+                :...FIS100 = B: LowRisk (2)
+                    FIS100 in {A,AB,BC}: HighRisk (15)
+
+
+Evaluation on training data (351 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    11   24( 6.8%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	   159    14    (a): class HighRisk
+	    10   168    (b): class LowRisk
+
+
+	Attribute usage:
+
+	100.00%	FIS100
+	 63.82%	MAT100
+	 32.76%	KPM130
+	 31.05%	MAT103
+	 16.81%	IPB108
+	 15.95%	IPB112
+	 10.83%	IPB106
+	  1.99%	BIO100
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+akurasi pada k ke- 	10	: 	74.36
+Confusion Matrix dan akurasi ke- 10
+          
+predict    HighRisk LowRisk
+  HighRisk       13       1
+  LowRisk         9      16

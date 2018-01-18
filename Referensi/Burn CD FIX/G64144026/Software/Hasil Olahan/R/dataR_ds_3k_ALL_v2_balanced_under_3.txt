@@ -1,0 +1,116 @@
+jumlah data uji ke- 3 = 25
+jumlah data latih ke- 3 = 227
+jumlah setiap kelas pada data uji ke- 3 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	7
+"2"	"LowRisk"	10
+"3"	"MediumRisk"	8
+jumlah setiap kelas pada data latih ke- 3 = 
+"Var1"	"Freq"
+"1"	"HighRisk"	77
+"2"	"LowRisk"	74
+"3"	"MediumRisk"	76
+Pohon Keputusan ke- 3
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+
+Classification Tree
+Number of samples: 227 
+Number of predictors: 15 
+
+Tree size: 25 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sun Mar 05 01:01:52 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 227 cases (16 attributes) from undefined.data
+
+Decision tree:
+
+FIS100 in {C,D}: HighRisk (61/9)
+FIS100 in {A,AB,B,BC}:
+:...MAT103 = E: LowRisk (0)
+    MAT103 in {C,D}:
+    :...BIO100 = AB: MediumRisk (4)
+    :   BIO100 in {A,B,BC,C,D,E}: HighRisk (15/2)
+    MAT103 in {A,AB}:
+    :...KOM201 in {A,BC,C,D}: LowRisk (54/10)
+    :   KOM201 in {AB,B}:
+    :   :...FIS100 in {A,BC}: MediumRisk (10/1)
+    :       FIS100 = AB:
+    :       :...MAT103 = AB: LowRisk (3)
+    :       :   MAT103 = A:
+    :       :   :...IPB111 in {A,B,BC,C}: LowRisk (5/1)
+    :       :       IPB111 = AB: MediumRisk (3)
+    :       FIS100 = B:
+    :       :...EKO100 = AB: LowRisk (1)
+    :           EKO100 in {B,BC,C,D,E}: MediumRisk (2)
+    :           EKO100 = A:
+    :           :...MAT103 = A: MediumRisk (5/1)
+    :               MAT103 = AB: LowRisk (2)
+    MAT103 in {B,BC}:
+    :...EKO100 in {D,E}: MediumRisk (0)
+        EKO100 = C: HighRisk (6/1)
+        EKO100 in {A,AB,B,BC}:
+        :...IPB108 in {C,D}: MediumRisk (0)
+            IPB108 = B:
+            :...KOM201 in {A,B,BC,C,D}: HighRisk (6/2)
+            :   KOM201 = AB: MediumRisk (3)
+            IPB108 in {A,AB,BC}:
+            :...IPB106 in {B,BC,C}: MediumRisk (8)
+                IPB106 in {A,AB}:
+                :...EKO100 = A: MediumRisk (24/11)
+                    EKO100 = BC: LowRisk (1)
+                    EKO100 = AB:
+                    :...KPM130 in {A,B,BC,C,D}: MediumRisk (5)
+                    :   KPM130 = AB: LowRisk (4)
+                    EKO100 = B:
+                    :...FIS100 in {A,AB,B}: MediumRisk (3)
+                        FIS100 = BC: LowRisk (2)
+
+
+Evaluation on training data (227 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    22   38(16.7%)   <<
+
+
+	   (a)   (b)   (c)    <-classified as
+	  ----  ----  ----
+	    74     2     1    (a): class HighRisk
+	     1    61    12    (b): class LowRisk
+	    13     9    54    (c): class MediumRisk
+
+
+	Attribute usage:
+
+	100.00%	FIS100
+	 73.13%	MAT103
+	 41.41%	KOM201
+	 31.72%	EKO100
+	 24.67%	IPB108
+	 20.70%	IPB106
+	  8.37%	BIO100
+	  3.96%	KPM130
+	  3.52%	IPB111
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+akurasi pada k ke- 	3	: 	56.00
+Confusion Matrix dan akurasi ke- 3
+            
+predict      HighRisk LowRisk MediumRisk
+  HighRisk          6       0          0
+  LowRisk           0       5          5
+  MediumRisk        1       5          3

@@ -1,0 +1,123 @@
+Pohon Keputusan ke- 2
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+
+Rule-Based Model
+Number of samples: 97 
+Number of predictors: 2 
+
+Number of Rules: 2 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Tue Mar 07 10:48:23 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 97 cases (3 attributes) from undefined.data
+
+Rules:
+
+Rule 1: (39/9, lift 1.5)
+	KOM331 in {A, AB, B}
+	->  class BAIK  [0.756]
+
+Rule 2: (58/18, lift 1.4)
+	KOM331 in {BC, C, D}
+	->  class CUKUP  [0.683]
+
+Default class: CUKUP
+
+
+Evaluation on training data (97 cases):
+
+	        Rules     
+	  ----------------
+	    No      Errors
+
+	     2   27(27.8%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	    30    18    (a): class BAIK
+	     9    40    (b): class CUKUP
+
+
+	Attribute usage:
+
+	100.00%	KOM331
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+akurasi pada k ke- 	2	: 	81.82
+Confusion Matrix dan akurasi ke- 2
+           
+predictRule BAIK CUKUP
+      BAIK     4     2
+      CUKUP    0     5
+PostResample TREE ke- 2
+ Accuracy     Kappa 
+0.8181818 0.6451613 
+PostResample RULE ke- 2
+ Accuracy     Kappa 
+0.8181818 0.6451613 
+Confusion Matrix TREE ke- 2
+Confusion Matrix and Statistics
+
+          Reference
+Prediction BAIK CUKUP
+     BAIK     4     2
+     CUKUP    0     5
+                                          
+               Accuracy : 0.8182          
+                 95% CI : (0.4822, 0.9772)
+    No Information Rate : 0.6364          
+    P-Value [Acc > NIR] : 0.1750          
+                                          
+                  Kappa : 0.6452          
+ Mcnemar's Test P-Value : 0.4795          
+                                          
+            Sensitivity : 1.0000          
+            Specificity : 0.7143          
+         Pos Pred Value : 0.6667          
+         Neg Pred Value : 1.0000          
+             Prevalence : 0.3636          
+         Detection Rate : 0.3636          
+   Detection Prevalence : 0.5455          
+      Balanced Accuracy : 0.8571          
+                                          
+       'Positive' Class : BAIK            
+                                          
+Confusion Matrix RULE ke- 2
+Confusion Matrix and Statistics
+
+          Reference
+Prediction BAIK CUKUP
+     BAIK     4     2
+     CUKUP    0     5
+                                          
+               Accuracy : 0.8182          
+                 95% CI : (0.4822, 0.9772)
+    No Information Rate : 0.6364          
+    P-Value [Acc > NIR] : 0.1750          
+                                          
+                  Kappa : 0.6452          
+ Mcnemar's Test P-Value : 0.4795          
+                                          
+            Sensitivity : 1.0000          
+            Specificity : 0.7143          
+         Pos Pred Value : 0.6667          
+         Neg Pred Value : 1.0000          
+             Prevalence : 0.3636          
+         Detection Rate : 0.3636          
+   Detection Prevalence : 0.5455          
+      Balanced Accuracy : 0.8571          
+                                          
+       'Positive' Class : BAIK            
+                                          

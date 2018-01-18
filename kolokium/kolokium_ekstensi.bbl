@@ -1,0 +1,299 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nyt/global/}
+    \entry{IRH2014}{book}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=837381f3cfcc6d47c288b7473aedf503}{%
+           family={Arkeman},
+           familyi={A\bibinitperiod},
+           given={Y},
+           giveni={Y\bibinitperiod}}}%
+        {{uniquename=0,hash=fe3dc2533b5fc6a0a56a64345a04424e}{%
+           family={Herdiyeni},
+           familyi={H\bibinitperiod},
+           given={Y},
+           giveni={Y\bibinitperiod}}}%
+        {{uniquename=0,hash=b699a355f2a23f2af2cd69596ff6005f}{%
+           family={Hermadi},
+           familyi={H\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod}}}%
+        {{uniquename=0,hash=4a8afc4c2114abd544bf72097448e472}{%
+           family={Laxmi},
+           familyi={L\bibinitperiod},
+           given={G\bibnamedelima F},
+           giveni={G\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IPB Press}%
+      }
+      \strng{namehash}{7bd5c5d9ca028dcc9fa814ea8230c3f6}
+      \strng{fullhash}{e8c92a9f3afe51accb1d82abc88329ad}
+      \strng{authornamehash}{7bd5c5d9ca028dcc9fa814ea8230c3f6}
+      \strng{authorfullhash}{e8c92a9f3afe51accb1d82abc88329ad}
+      \field{sortinit}{A}
+      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Algoritma Genetika Tujuan Jamak (Multi-Objective Genetic Algorithm}
+      \field{year}{2014}
+      \field{dateera}{ce}
+    \endentry
+    \entry{BASU2015}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=8c128da11973cf904a6bae2b80b079bd}{%
+           family={Basu},
+           familyi={B\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {PHI Learning Privat Limited}%
+      }
+      \strng{namehash}{8c128da11973cf904a6bae2b80b079bd}
+      \strng{fullhash}{8c128da11973cf904a6bae2b80b079bd}
+      \strng{authornamehash}{8c128da11973cf904a6bae2b80b079bd}
+      \strng{authorfullhash}{8c128da11973cf904a6bae2b80b079bd}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Software Quality Assurance, Testing and Metrics}
+      \field{urlday}{14}
+      \field{urlmonth}{8}
+      \field{urlyear}{2017}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://books.google.co.id/books
+      \endverb
+    \endentry
+    \entry{HERMADI2015}{thesis}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=b699a355f2a23f2af2cd69596ff6005f}{%
+           family={Hermadi},
+           familyi={H\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of New South Wales}%
+      }
+      \strng{namehash}{b699a355f2a23f2af2cd69596ff6005f}
+      \strng{fullhash}{b699a355f2a23f2af2cd69596ff6005f}
+      \strng{authornamehash}{b699a355f2a23f2af2cd69596ff6005f}
+      \strng{authorfullhash}{b699a355f2a23f2af2cd69596ff6005f}
+      \field{sortinit}{H}
+      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Path Testing using Genetic Algorithm}
+      \field{type}{Disertasi}
+      \field{year}{2015}
+      \field{dateera}{ce}
+    \endentry
+    \entry{KHAN2011}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=d6ee5af8f47253b08a3fddf624fda0a0}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={M\bibnamedelima E},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{d6ee5af8f47253b08a3fddf624fda0a0}
+      \strng{fullhash}{d6ee5af8f47253b08a3fddf624fda0a0}
+      \strng{authornamehash}{d6ee5af8f47253b08a3fddf624fda0a0}
+      \strng{authorfullhash}{d6ee5af8f47253b08a3fddf624fda0a0}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Software Engineering and Its Applications}
+      \field{title}{Different Approaches to White Box Testing Technique for Finding Errors}
+      \field{urlday}{21}
+      \field{urlmonth}{8}
+      \field{urlyear}{2017}
+      \field{volume}{5}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{3}
+      \range{pages}{1}
+      \verb{url}
+      \verb http://www.sersc.org/journals/IJSEIA/vol5_no3_2011/1.pdf
+      \endverb
+    \endentry
+    \entry{KUMAR20168}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=b2c259f2d8e3817536614be6367f6c64}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+        {{uniquename=0,hash=59085a411a6098393f1f57e0a3990aed}{%
+           family={Mishra},
+           familyi={M\bibinitperiod},
+           given={K\bibnamedelima K},
+           giveni={K\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{08557c5ce9f5152531c12a663e4c1296}
+      \strng{fullhash}{08557c5ce9f5152531c12a663e4c1296}
+      \strng{authornamehash}{08557c5ce9f5152531c12a663e4c1296}
+      \strng{authorfullhash}{08557c5ce9f5152531c12a663e4c1296}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Procedia Computer Science}
+      \field{title}{The Impacts of Test Automation on Software’s Cost, Quality and Time to Market}
+      \field{urlday}{20}
+      \field{urlmonth}{8}
+      \field{urlyear}{2017}
+      \field{volume}{79}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{8\bibrangedash 15}
+      \range{pages}{8}
+      \verb{url}
+      \verb http://www.science-direct.com/science/article/pii/%5C%5CS1877050916001277
+      \endverb
+    \endentry
+    \entry{GLENFORD2012}{book}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=64f84a0cfd399eae64bdb20d9adb3b23}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={G\bibnamedelima J},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{uniquename=0,hash=11c70453eb45dbbf81842b6376929601}{%
+           family={Sandler},
+           familyi={S\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod}}}%
+        {{uniquename=0,hash=0f701e137b5d2c2ce937bf3bd03729ed}{%
+           family={Badgett},
+           familyi={B\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {John Willey}%
+        {Sons, Inc, Hoboken, New York}%
+      }
+      \strng{namehash}{2f2f6d1e1a27002c12a1f6af2b22f96f}
+      \strng{fullhash}{539b13d6cc7068976dd51515d0a63ed5}
+      \strng{authornamehash}{2f2f6d1e1a27002c12a1f6af2b22f96f}
+      \strng{authorfullhash}{539b13d6cc7068976dd51515d0a63ed5}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Art of Software Testing}
+      \field{urlday}{14}
+      \field{urlmonth}{8}
+      \field{urlyear}{2017}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://books.google.co.id/books
+      \endverb
+    \endentry
+    \entry{TIKIR2011}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=7333e9f2916d413d09b6a97428e5cd60}{%
+           family={Tikir},
+           familyi={T\bibinitperiod},
+           given={M\bibnamedelima M},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{uniquename=0,hash=5c71829402ee7b1959cec2bc5e0b0863}{%
+           family={Hollingsworth},
+           familyi={H\bibinitperiod},
+           given={J\bibnamedelima K},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{0ff4556cbcb194b1a0847d03e24db7ff}
+      \strng{fullhash}{0ff4556cbcb194b1a0847d03e24db7ff}
+      \strng{authornamehash}{0ff4556cbcb194b1a0847d03e24db7ff}
+      \strng{authorfullhash}{0ff4556cbcb194b1a0847d03e24db7ff}
+      \field{sortinit}{T}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Software Engineering and Its Applications}
+      \field{title}{Efficient Instrumentation for Code Coverage Testing}
+      \field{urlday}{21}
+      \field{urlmonth}{8}
+      \field{urlyear}{2017}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://www.researchgate.net/publication/2835608_Efficient_Instrumentation_for_Code_Coverage_Testing
+      \endverb
+    \endentry
+    \entry{MCCABE}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=9186a4dc48b7285e08bded28887b3036}{%
+           family={Watson},
+           familyi={W\bibinitperiod},
+           given={A\bibnamedelima H},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{uniquename=0,hash=4fa215097f776c05471b03187917a169}{%
+           family={McCabe},
+           familyi={M\bibinitperiod},
+           given={T\bibnamedelima J},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{d60fc1b2be51678dd7da035a47085cef}
+      \strng{fullhash}{d60fc1b2be51678dd7da035a47085cef}
+      \strng{authornamehash}{d60fc1b2be51678dd7da035a47085cef}
+      \strng{authorfullhash}{d60fc1b2be51678dd7da035a47085cef}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NIST Special Publication}
+      \field{title}{Structured Testing: A Testing Methodology Using the Cyclomatic Complexity Metric)}
+      \field{urlday}{14}
+      \field{urlmonth}{8}
+      \field{urlyear}{2017}
+      \field{year}{1996}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://www.mccabe.com/pdf/mccabe-nist235r.pdf
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

@@ -1,0 +1,66 @@
+jumlah data uji ke- 3 = 10
+jumlah data latih ke- 3 = 97
+jumlah setiap kelas pada data uji ke- 3 = 
+"Var1"	"Freq"
+"1"	"BAIK"	4
+"2"	"CUKUP"	6
+jumlah setiap kelas pada data latih ke- 3 = 
+"Var1"	"Freq"
+"1"	"BAIK"	33
+"2"	"CUKUP"	64
+Pohon Keputusan ke- 3
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+
+Classification Tree
+Number of samples: 97 
+Number of predictors: 3 
+
+Tree size: 2 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Tue Mar 07 10:46:42 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 97 cases (4 attributes) from undefined.data
+
+Decision tree:
+
+MAT100 = A: BAIK (34/14)
+MAT100 in {AB,B,BC,C,D}: CUKUP (63/13)
+
+
+Evaluation on training data (97 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	     2   27(27.8%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	    20    13    (a): class BAIK
+	    14    50    (b): class CUKUP
+
+
+	Attribute usage:
+
+	100.00%	MAT100
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData)
+akurasi pada k ke- 	3	: 	60.00
+Confusion Matrix dan akurasi ke- 3
+       
+predict BAIK CUKUP
+  BAIK     1     1
+  CUKUP    3     5

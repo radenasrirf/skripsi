@@ -1,0 +1,6 @@
+"","AGB100","FIS100","IPB107","IPB108","IPB111","IPB112","KPM130","MAT100","BIO100","EKO100","IPB100","IPB106","KIM101","KOM201","MAT103","CLASS"
+"23","A","B","AB","A","AB","B","A","AB","B","B","A","AB","BC","AB","B","LowRisk"
+"10","A","C","BC","B","AB","A","B","C","D","BC","AB","BC","C","B","C","HighRisk"
+"6","A","C","AB","A","AB","A","A","C","D","C","B","B","BC","AB","BC","HighRisk"
+"35","A","C","A","A","A","A","A","BC","BC","C","A","AB","C","AB","BC","MediumRisk"
+"16","A","C","BC","A","B","AB","A","C","D","BC","D","AB","AB","AB","C","HighRisk"

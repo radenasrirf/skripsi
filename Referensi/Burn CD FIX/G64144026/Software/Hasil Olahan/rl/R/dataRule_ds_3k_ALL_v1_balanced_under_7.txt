@@ -1,0 +1,168 @@
+Pohon Keputusan ke- 7
+
+Call:
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+
+Rule-Based Model
+Number of samples: 46 
+Number of predictors: 15 
+
+Number of Rules: 9 
+
+Non-standard options: attempt to group attributes
+
+
+C5.0 [Release 2.07 GPL Edition]  	Fri Apr 28 15:03:48 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 46 cases (16 attributes) from undefined.data
+
+Rules:
+
+Rule 1: (4, lift 2.6)
+	IPB108 = BC
+	BIO100 = D
+	->  class HighRisk  [0.833]
+
+Rule 2: (10/2, lift 2.3)
+	IPB108 = A
+	BIO100 in {BC, C, D}
+	->  class HighRisk  [0.750]
+
+Rule 3: (9, lift 2.8)
+	IPB108 = A
+	BIO100 in {A, AB, B}
+	->  class LowRisk  [0.909]
+
+Rule 4: (15/2, lift 2.5)
+	BIO100 in {A, AB, B}
+	EKO100 in {A, AB}
+	->  class LowRisk  [0.824]
+
+Rule 5: (1, lift 2.0)
+	IPB108 = C
+	->  class LowRisk  [0.667]
+
+Rule 6: (3, lift 2.3)
+	IPB108 in {AB, D}
+	BIO100 in {C, D}
+	->  class MediumRisk  [0.800]
+
+Rule 7: (2, lift 2.2)
+	IPB108 = BC
+	BIO100 in {BC, C}
+	->  class MediumRisk  [0.750]
+
+Rule 8: (8/2, lift 2.0)
+	IPB108 in {AB, B}
+	EKO100 in {B, C}
+	->  class MediumRisk  [0.700]
+
+Rule 9: (11/5, lift 1.5)
+	IPB108 = B
+	->  class MediumRisk  [0.538]
+
+Default class: MediumRisk
+
+
+Evaluation on training data (46 cases):
+
+	        Rules     
+	  ----------------
+	    No      Errors
+
+	     9    7(15.2%)   <<
+
+
+	   (a)   (b)   (c)    <-classified as
+	  ----  ----  ----
+	    12           3    (a): class HighRisk
+	          15          (b): class LowRisk
+	     2     2    12    (c): class MediumRisk
+
+
+	Attribute usage:
+
+	 91.30%	IPB108
+	 76.09%	BIO100
+	 50.00%	EKO100
+
+
+Time: 0.0 secs
+
+C5.0.formula(formula = CLASS ~ ., data = trainData, rules = TRUE)
+akurasi pada k ke- 	7	: 	40.00
+Confusion Matrix dan akurasi ke- 7
+            
+predictRule  HighRisk LowRisk MediumRisk
+  HighRisk          0       0          0
+  LowRisk           0       2          1
+  MediumRisk        2       0          0
+PostResample TREE ke- 7
+Accuracy    Kappa 
+   0.600    0.375 
+PostResample RULE ke- 7
+ Accuracy     Kappa 
+0.4000000 0.1176471 
+Confusion Matrix TREE ke- 7
+Confusion Matrix and Statistics
+
+            Reference
+Prediction   HighRisk LowRisk MediumRisk
+  HighRisk          1       0          0
+  LowRisk           0       2          1
+  MediumRisk        1       0          0
+
+Overall Statistics
+                                          
+               Accuracy : 0.6             
+                 95% CI : (0.1466, 0.9473)
+    No Information Rate : 0.4             
+    P-Value [Acc > NIR] : 0.3174          
+                                          
+                  Kappa : 0.375           
+ Mcnemar's Test P-Value : NA              
+
+Statistics by Class:
+
+                     Class: HighRisk Class: LowRisk Class: MediumRisk
+Sensitivity                     0.50         1.0000             0.000
+Specificity                     1.00         0.6667             0.750
+Pos Pred Value                  1.00         0.6667             0.000
+Neg Pred Value                  0.75         1.0000             0.750
+Prevalence                      0.40         0.4000             0.200
+Detection Rate                  0.20         0.4000             0.000
+Detection Prevalence            0.20         0.6000             0.200
+Balanced Accuracy               0.75         0.8333             0.375
+Confusion Matrix RULE ke- 7
+Confusion Matrix and Statistics
+
+            Reference
+Prediction   HighRisk LowRisk MediumRisk
+  HighRisk          0       0          0
+  LowRisk           0       2          1
+  MediumRisk        2       0          0
+
+Overall Statistics
+                                          
+               Accuracy : 0.4             
+                 95% CI : (0.0527, 0.8534)
+    No Information Rate : 0.4             
+    P-Value [Acc > NIR] : 0.663           
+                                          
+                  Kappa : 0.1176          
+ Mcnemar's Test P-Value : NA              
+
+Statistics by Class:
+
+                     Class: HighRisk Class: LowRisk Class: MediumRisk
+Sensitivity                      0.0         1.0000            0.0000
+Specificity                      1.0         0.6667            0.5000
+Pos Pred Value                   NaN         0.6667            0.0000
+Neg Pred Value                   0.6         1.0000            0.6667
+Prevalence                       0.4         0.4000            0.2000
+Detection Rate                   0.0         0.4000            0.0000
+Detection Prevalence             0.0         0.6000            0.4000
+Balanced Accuracy                0.5         0.8333            0.2500
