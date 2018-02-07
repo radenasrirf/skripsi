@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.20)  17 JAN 2018 17:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.20)  30 JAN 2018 12:59
 entering extended mode
 **./kolokium_ekstensi.tex
 (kolokium_ekstensi.tex
@@ -1495,11 +1495,7 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count420
 \@quotereset=\count421
-(kolokium_ekstensi.aux
-
-LaTeX Warning: Label `fig:cfg' multiply defined.
-
-)
+(kolokium_ekstensi.aux)
 \openout1 = `kolokium_ekstensi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 130.
@@ -1523,8 +1519,7 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 \AtBeginShipoutBox=\box80
 Package hyperref Info: Link coloring ON on input line 130.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
@@ -1742,15 +1737,15 @@ File: gambar/struktur.png Graphic file (type png)
 Package pdftex.def Info: gambar/struktur.png used on input line 23.
 (pdftex.def)             Requested size: 230.0pt x 205.7149pt.
 
-Overfull \hbox (3.51974pt too wide) in paragraph at lines 32--34
+Overfull \hbox (3.51974pt too wide) in paragraph at lines 32--33
 \OT1/ptm/m/n/10.95 (-20) Penguraian kode pro-gram mat-lab di-lakukan de-ngan me
 ng-
  []
 
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <10> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 34.
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 35.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <10> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 34.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 35.
 
 Package Fancyhdr Warning: \headheight is too small (11.0pt): 
  Make it at least 12.0pt.
@@ -1758,7 +1753,13 @@ Package Fancyhdr Warning: \headheight is too small (11.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2 <./gambar/metode_penelitian.png (PNG copy)> <./gambar/struktur.png>]
-Overfull \hbox (0.16843pt too wide) in paragraph at lines 43--44
+Overfull \hbox (0.32826pt too wide) in paragraph at lines 39--40
+\OT1/ptm/m/n/10.95 (-20) meng-gu-nakan ke-las XML-Doc-u-ment yang ter-da-pat da
+lam
+ []
+
+
+Overfull \hbox (0.16843pt too wide) in paragraph at lines 44--45
 []\OT1/ptm/m/n/10.95 (-20) Menggambarkan jalur dalam ben-tuk  \OT1/ptm/m/it/10.
 95 (-20) Con-trol Flow
  []
@@ -1766,8 +1767,19 @@ Overfull \hbox (0.16843pt too wide) in paragraph at lines 43--44
 <gambar/CFG2.png, id=46, 486.01575pt x 201.75375pt>
 File: gambar/CFG2.png Graphic file (type png)
  <use gambar/CFG2.png>
-Package pdftex.def Info: gambar/CFG2.png used on input line 63.
+Package pdftex.def Info: gambar/CFG2.png used on input line 58.
 (pdftex.def)             Requested size: 220.0pt x 91.32707pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.79 ...n dengan menggunakan bahasa pemrograman C#
+                                                   dan menggunakan IDE Micro...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
 
 Package Fancyhdr Warning: \headheight is too small (11.0pt): 
@@ -1775,58 +1787,157 @@ Package Fancyhdr Warning: \headheight is too small (11.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3 <./gambar/CFG2.png (PNG copy)>]) (hasildanpembahasan.tex
+[3 <./gambar/CFG2.png (PNG copy)>]
+! You can't use `macro parameter character #' in horizontal mode.
+l.81 ...viz.Net. Graphviz.Net adalah pembungkus C#
+                                                   untuk generator grafik Gr...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+Overfull \hbox (35.76103pt too wide) in paragraph at lines 81--82
+\OT1/ptm/m/n/10.95 (-20) CFG di-vi-su-al-isas-ikan de-ngan meng-gu-nakan li-bra
+ry Graphviz.Net.
+ []
+
+
+Overfull \hbox (10.64897pt too wide) in paragraph at lines 81--82
+\OT1/ptm/m/n/10.95 (-20) aran yang dikem-ba-likan ketika mengek-sekusi Graphviz
+.Net
+ []
+
+) (hasildanpembahasan.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 18.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<gambar/classdiagram.png, id=64, 472.76625pt x 347.79938pt>
+<gambar/classdiagram.png, id=63, 472.76625pt x 347.79938pt>
 File: gambar/classdiagram.png Graphic file (type png)
 
 <use gambar/classdiagram.png>
-Package pdftex.def Info: gambar/classdiagram.png used on input line 47.
+Package pdftex.def Info: gambar/classdiagram.png used on input line 43.
 (pdftex.def)             Requested size: 230.0pt x 169.20789pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<gambar/perancanganantarmuka.png, id=66, 632.3625pt x 886.81313pt>
+<gambar/perancanganantarmuka.png, id=65, 632.3625pt x 886.81313pt>
 File: gambar/perancanganantarmuka.png Graphic file (type png)
 
 <use gambar/perancanganantarmuka.png>
-Package pdftex.def Info: gambar/perancanganantarmuka.png used on input line 55.
+Package pdftex.def Info: gambar/perancanganantarmuka.png used on input line 52.
 
 (pdftex.def)             Requested size: 230.0pt x 322.54068pt.
 
-Overfull \hbox (1.20935pt too wide) in paragraph at lines 52--59
+Overfull \hbox (1.20935pt too wide) in paragraph at lines 49--56
 \OT1/ptm/m/n/10.95 (-20) Perancangan an-tar-muka meliputi per-an-can-gan an-tar
 -muka
  []
 
 
-Package Fancyhdr Warning: \headheight is too small (11.0pt): 
- Make it at least 12.0pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4 <./gambar/classdiagram.png> <./gambar/perancanganantarmuka.png>]
-<gambar/tA2008.png, id=77, 486.618pt x 227.04825pt>
+
+Overfull \hbox (3.69002pt too wide) in paragraph at lines 61--62
+[]\OT1/ptm/m/n/10.95 (-20) Sebagai con-toh, kode pro-gram yang di-gu-nakan adal
+ah
+ []
+
+<gambar/tA2008.png, id=67, 486.618pt x 227.04825pt>
 File: gambar/tA2008.png Graphic file (type png)
  <use gambar/tA2008.png>
-Package pdftex.def Info: gambar/tA2008.png used on input line 69.
+Package pdftex.def Info: gambar/tA2008.png used on input line 67.
 (pdftex.def)             Requested size: 230.0pt x 107.3155pt.
 
-Overfull \hbox (3.51974pt too wide) in paragraph at lines 75--77
+Overfull \hbox (0.15695pt too wide) in paragraph at lines 64--71
+\OT1/ptm/m/n/10.95 (-20) Gambar [][]6[][] meru-pakan kode pro-gram tA2008, yait
+u fungsi
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (3.51974pt too wide) in paragraph at lines 73--74
 \OT1/ptm/m/n/10.95 (-20) Penguraian kode pro-gram mat-lab di-lakukan de-ngan me
 ng-
  []
 
 
-Overfull \hbox (0.16843pt too wide) in paragraph at lines 86--87
-[]\OT1/ptm/m/n/10.95 (-20) Menggambarkan jalur dalam ben-tuk  \OT1/ptm/m/it/10.
-95 (-20) Con-trol Flow
+Package Fancyhdr Warning: \headheight is too small (11.0pt): 
+ Make it at least 12.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4 <./gambar/classdiagram.png>]
+<"gambar/XML tA2008".png, id=80, 325.81725pt x 263.7855pt>
+File: "gambar/XML tA2008".png Graphic file (type png)
+
+<use "gambar/XML tA2008".png>
+Package pdftex.def Info: "gambar/XML tA2008".png used on input line 77.
+(pdftex.def)             Requested size: 218.17422pt x 176.63474pt.
+
+Overfull \hbox (7.73782pt too wide) in paragraph at lines 83--84
+\OT1/ptm/m/n/10.95 (-20) gu-nakan ke-las XML-Doc-u-ment yang ter-da-pat dalam \
+OT1/ptm/m/it/10.95 (-20) names-
+ []
+
+<"gambar/hasil node".png, id=82, 483.60675pt x 225.84375pt>
+File: "gambar/hasil node".png Graphic file (type png)
+
+<use "gambar/hasil node".png>
+Package pdftex.def Info: "gambar/hasil node".png used on input line 88.
+(pdftex.def)             Requested size: 218.17422pt x 101.88719pt.
+
+<gambar/ObjectDiagram.png, id=84, 330.033pt x 450.483pt>
+File: gambar/ObjectDiagram.png Graphic file (type png)
+
+<use gambar/ObjectDiagram.png>
+Package pdftex.def Info: gambar/ObjectDiagram.png used on input line 95.
+(pdftex.def)             Requested size: 218.17422pt x 297.79398pt.
+
+Overfull \hbox (3.46652pt too wide) in paragraph at lines 85--99
+\OT1/ptm/m/n/10.95 (-20) tur kon-trol seperti IF-ELSE-END, SWITCH-CASE, FOR,
+ []
+
+
+Overfull \hbox (11.57874pt too wide) in paragraph at lines 85--99
+\OT1/ptm/m/n/10.95 (-20) ben-tuk 9 buah \OT1/ptm/m/it/10.95 (-20) node \OT1/ptm
+/m/n/10.95 (-20) dan 11 buah \OT1/ptm/m/it/10.95 (-20) edge \OT1/ptm/m/n/10.95 
+(-20) yang menghubungkan
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (11.0pt): 
+ Make it at least 12.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5 <./gambar/perancanganantarmuka.png> <./gambar/tA2008.png>]
+<gambar/dot.png, id=96, 405.9165pt x 145.7445pt>
+File: gambar/dot.png Graphic file (type png)
+ <use gambar/dot.png>
+Package pdftex.def Info: gambar/dot.png used on input line 113.
+(pdftex.def)             Requested size: 218.17422pt x 78.33614pt.
+
+<gambar/cfgtA2008.png, id=98, 281.853pt x 355.92975pt>
+File: gambar/cfgtA2008.png Graphic file (type png)
+
+<use gambar/cfgtA2008.png>
+Package pdftex.def Info: gambar/cfgtA2008.png used on input line 122.
+(pdftex.def)             Requested size: 218.17422pt x 275.52226pt.
+
+Overfull \hbox (4.46101pt too wide) in paragraph at lines 119--126
+\OT1/ptm/m/n/10.95 (-20) vi-su-al-isas-ikan de-ngan meng-gu-nakan li-brary Grap
+hviz.Net.
  []
 
 
@@ -1835,11 +1946,51 @@ Package Fancyhdr Warning: \headheight is too small (11.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5 <./gambar/tA2008.png>]
-File: gambar/CFG2.png Graphic file (type png)
- <use gambar/CFG2.png>
-Package pdftex.def Info: gambar/CFG2.png used on input line 106.
-(pdftex.def)             Requested size: 220.0pt x 91.32707pt.
+[6 <./gambar/XML tA2008.png (PNG copy)> <./gambar/hasil node.png (PNG copy)> <.
+/gambar/ObjectDiagram.png (PNG copy)> <./gambar/dot.png (PNG copy)>]
+<gambar/instrumentasi.png, id=113, 361.95226pt x 331.2375pt>
+File: gambar/instrumentasi.png Graphic file (type png)
+
+<use gambar/instrumentasi.png>
+Package pdftex.def Info: gambar/instrumentasi.png used on input line 143.
+(pdftex.def)             Requested size: 218.17422pt x 199.6639pt.
+
+<gambar/hasilekseskusi.png, id=114, 249.93375pt x 133.6995pt>
+File: gambar/hasilekseskusi.png Graphic file (type png)
+
+<use gambar/hasilekseskusi.png>
+Package pdftex.def Info: gambar/hasilekseskusi.png used on input line 149.
+(pdftex.def)             Requested size: 169.69147pt x 90.77776pt.
+
+<gambar/implementasiantarmuka.png, id=116, 1428.83812pt x 2047.65pt>
+File: gambar/implementasiantarmuka.png Graphic file (type png)
+
+<use gambar/implementasiantarmuka.png>
+Package pdftex.def Info: gambar/implementasiantarmuka.png used on input line 15
+9.
+(pdftex.def)             Requested size: 218.17422pt x 312.6333pt.
+
+<gambar/tabeljalur.png, id=117, 399.29175pt x 227.6505pt>
+File: gambar/tabeljalur.png Graphic file (type png)
+
+<use gambar/tabeljalur.png>
+Package pdftex.def Info: gambar/tabeljalur.png used on input line 173.
+(pdftex.def)             Requested size: 218.17422pt x 124.39185pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (11.0pt): 
+ Make it at least 12.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7 <./gambar/cfgtA2008.png (PNG copy)> <./gambar/instrumentasi.png (PNG copy)> 
+<./gambar/hasilekseskusi.png (PNG copy)>]
+<gambar/tabelperbandingan.png, id=127, 366.168pt x 205.36725pt>
+File: gambar/tabelperbandingan.png Graphic file (type png)
+
+<use gambar/tabelperbandingan.png>
+Package pdftex.def Info: gambar/tabelperbandingan.png used on input line 182.
+(pdftex.def)             Requested size: 218.17422pt x 122.36581pt.
 ) (kesimpulan.tex)
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 170.
 
@@ -1852,18 +2003,22 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
+Overfull \hbox (4.53227pt too wide) in paragraph at lines 171--171
+\OT1/pcr/m/n/10.95 sersc . org / journals / IJSEIA / vol5 _ no3 _
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (11.0pt): 
  Make it at least 12.0pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6]
-Overfull \hbox (4.53227pt too wide) in paragraph at lines 171--171
-\OT1/pcr/m/n/10.95 sersc . org / journals / IJSEIA / vol5 _ no3 _
- []
+[8 <./gambar/implementasiantarmuka.png
 
-
+pdfTeX warning: pdflatex.exe (file ./gambar/implementasiantarmuka.png): large i
+nterlaced PNG might cause out of memory (use non-interlaced PNG to fix this)
+> <./gambar/tabeljalur.png (PNG copy)> <./gambar/tabelperbandingan.png (PNG cop
+y)>]
 Overfull \hbox (4.20377pt too wide) in paragraph at lines 171--171
 \OT1/pcr/m/n/10.95 direct . com / science / article / pii / %5C %
  []
@@ -1886,7 +2041,7 @@ Package Fancyhdr Warning: \headheight is too small (11.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7
+[9
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 174.
@@ -1896,23 +2051,19 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 174.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 174.
 Package rerunfilecheck Info: File `kolokium_ekstensi.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package logreq Info: Writing requests to 'kolokium_ekstensi.run.xml'.
 \openout1 = `kolokium_ekstensi.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 174.
  ) 
 Here is how much of TeX's memory you used:
- 28193 strings out of 493323
- 486723 string characters out of 3139054
- 996157 words of memory out of 3000000
- 31050 multiletter control sequences out of 15000+200000
- 595158 words of font info for 265 fonts, out of 3000000 for 9000
+ 28266 strings out of 493323
+ 488374 string characters out of 3139054
+ 995819 words of memory out of 3000000
+ 31098 multiletter control sequences out of 15000+200000
+ 595526 words of font info for 268 fonts, out of 3000000 for 9000
  1220 hyphenation exceptions out of 8191
- 60i,11n,94p,10423b,1502s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,16n,94p,10423b,1500s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
@@ -1923,9 +2074,9 @@ les/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
 /times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on kolokium_ekstensi.pdf (7 pages, 302236 bytes).
+Output written on kolokium_ekstensi.pdf (9 pages, 1009856 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 35 named destinations out of 1000 (max. 500000)
- 50207 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 203 PDF objects out of 1000 (max. 8388607)
+ 46 named destinations out of 1000 (max. 500000)
+ 50257 words of extra memory for PDF output out of 51595 (max. 10000000)
 

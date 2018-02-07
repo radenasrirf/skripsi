@@ -2162,9 +2162,6 @@
     <bcf:citekey order="15">MCCABE</bcf:citekey>
     <bcf:citekey order="16">HERMADI2015</bcf:citekey>
     <bcf:citekey order="17">HERMADI2015</bcf:citekey>
-    <bcf:citekey order="18">BASU2015</bcf:citekey>
-    <bcf:citekey order="19">MCCABE</bcf:citekey>
-    <bcf:citekey order="20">MCCABE</bcf:citekey>
     <bcf:citekey order="0">*</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt/global/" type="entry" sortscheme="nyt" sortnamekeyscheme="global" labelprefix="">
