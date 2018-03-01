@@ -2157,11 +2157,22 @@
     <bcf:citekey order="10">HERMADI2015</bcf:citekey>
     <bcf:citekey order="11">HERMADI2015</bcf:citekey>
     <bcf:citekey order="12">HERMADI2015</bcf:citekey>
-    <bcf:citekey order="13">BASU2015</bcf:citekey>
-    <bcf:citekey order="14">MCCABE</bcf:citekey>
-    <bcf:citekey order="15">MCCABE</bcf:citekey>
-    <bcf:citekey order="16">HERMADI2015</bcf:citekey>
-    <bcf:citekey order="17">HERMADI2015</bcf:citekey>
+    <bcf:citekey order="13">HOUCQUE2005</bcf:citekey>
+    <bcf:citekey order="14">SUFFOSPARSER2005</bcf:citekey>
+    <bcf:citekey order="15">SUFFOSPARSER2005</bcf:citekey>
+    <bcf:citekey order="16">HARTWELL2017</bcf:citekey>
+    <bcf:citekey order="17">BASU2015</bcf:citekey>
+    <bcf:citekey order="18">GANSNER2015</bcf:citekey>
+    <bcf:citekey order="19">MCCABE</bcf:citekey>
+    <bcf:citekey order="20">ELLSONGRAPHVIZ2003</bcf:citekey>
+    <bcf:citekey order="21">MCCABE</bcf:citekey>
+    <bcf:citekey order="22">IRH2014</bcf:citekey>
+    <bcf:citekey order="23">DIXONGRAPHVIZ2013</bcf:citekey>
+    <bcf:citekey order="24">DIXONGRAPHVIZ2013</bcf:citekey>
+    <bcf:citekey order="25">GANSNER2015</bcf:citekey>
+    <bcf:citekey order="26">ALIMUCAJ2009</bcf:citekey>
+    <bcf:citekey order="27">HERMADI2015</bcf:citekey>
+    <bcf:citekey order="28">HERMADI2015</bcf:citekey>
     <bcf:citekey order="0">*</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nyt/global/" type="entry" sortscheme="nyt" sortnamekeyscheme="global" labelprefix="">

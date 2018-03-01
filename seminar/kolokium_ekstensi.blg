@@ -1,15 +1,18 @@
 [0] Config.pm:354> INFO - This is Biber 2.7
 [0] Config.pm:357> INFO - Logfile is 'kolokium_ekstensi.blg'
-[33] biber-MSWIN64:303> INFO - === 
-[61] Biber.pm:359> INFO - Reading 'kolokium_ekstensi.bcf'
-[175] Biber.pm:832> INFO - Using all citekeys in bib section 0
-[189] Biber.pm:3670> INFO - Processing section 0
-[216] Biber.pm:3840> INFO - Looking for bibtex format file 'pustaka.bib' for section 0
-[245] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[251] bibtex.pm:1292> INFO - Found BibTeX data source 'pustaka.bib'
-[301] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[301] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[301] Biber.pm:3499> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'en-US'
-[302] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
-[313] bbl.pm:608> INFO - Writing 'kolokium_ekstensi.bbl' with encoding 'UTF-8'
-[316] bbl.pm:712> INFO - Output to kolokium_ekstensi.bbl
+[34] biber-MSWIN64:303> INFO - === 
+[60] Biber.pm:359> INFO - Reading 'kolokium_ekstensi.bcf'
+[204] Biber.pm:832> INFO - Using all citekeys in bib section 0
+[228] Biber.pm:3670> INFO - Processing section 0
+[258] Biber.pm:3840> INFO - Looking for bibtex format file 'pustaka.bib' for section 0
+[281] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[291] bibtex.pm:1292> INFO - Found BibTeX data source 'pustaka.bib'
+[323] Utils.pm:164> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[323] Utils.pm:164> WARN - BibTeX subsystem: author, warning: comma(s) at end of name (removing)
+[372] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[372] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[372] Biber.pm:3499> INFO - Sorting list 'nyt/global/' of type 'entry' with scheme 'nyt' and locale 'en-US'
+[372] Biber.pm:3505> INFO - No sort tailoring available for locale 'en-US'
+[390] bbl.pm:608> INFO - Writing 'kolokium_ekstensi.bbl' with encoding 'UTF-8'
+[394] bbl.pm:712> INFO - Output to kolokium_ekstensi.bbl
+[395] Biber.pm:109> INFO - WARNINGS: 2

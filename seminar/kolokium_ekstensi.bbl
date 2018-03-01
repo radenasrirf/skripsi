@@ -19,6 +19,34 @@
 
 \refsection{0}
   \sortlist[entry]{nyt/global/}
+    \entry{ALIMUCAJ2009}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=c4f00f4c9282a7a3c8e7bde41e86c14a}{%
+           family={Alimucaj},
+           familyi={A\bibinitperiod},
+           given={Aldi},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c4f00f4c9282a7a3c8e7bde41e86c14a}
+      \strng{fullhash}{c4f00f4c9282a7a3c8e7bde41e86c14a}
+      \strng{authornamehash}{c4f00f4c9282a7a3c8e7bde41e86c14a}
+      \strng{authorfullhash}{c4f00f4c9282a7a3c8e7bde41e86c14a}
+      \field{sortinit}{A}
+      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Control Flow Graph	Generator Documentation}
+      \field{urlday}{19}
+      \field{urlmonth}{7}
+      \field{urlyear}{2017}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb http://eclipsefcg.sourceforge.net/Documentation.pdf
+      \endverb
+    \endentry
     \entry{IRH2014}{book}{}
       \name{author}{4}{}{%
         {{uniquename=0,hash=837381f3cfcc6d47c288b7473aedf503}{%
@@ -89,6 +117,144 @@
       \verb https://books.google.co.id/books
       \endverb
     \endentry
+    \entry{DIXONGRAPHVIZ2013}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=292012287e692e559cbae0942ca1d79a}{%
+           family={Dixon},
+           familyi={D\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{292012287e692e559cbae0942ca1d79a}
+      \strng{fullhash}{292012287e692e559cbae0942ca1d79a}
+      \strng{authornamehash}{292012287e692e559cbae0942ca1d79a}
+      \strng{authorfullhash}{292012287e692e559cbae0942ca1d79a}
+      \field{sortinit}{D}
+      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Graphviz.Net C\# Wrapper}
+      \field{urlday}{22}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://github.com/JamieDixon/GraphViz-C-Sharp-Wrapper
+      \endverb
+    \endentry
+    \entry{ELLSONGRAPHVIZ2003}{article}{}
+      \name{author}{5}{}{%
+        {{uniquename=0,hash=4936c4a0b43a071f35ac377918ac0de9}{%
+           family={Ellson},
+           familyi={E\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=6067ccbe5a25f3769ba86f7bbb3cf5be}{%
+           family={Gansner},
+           familyi={G\bibinitperiod},
+           given={E\bibnamedelima R},
+           giveni={E\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{uniquename=0,hash=50d723fd9b9c9a68c59c58d6dd17ed98}{%
+           family={Koutsofios},
+           familyi={K\bibinitperiod},
+           given={E},
+           giveni={E\bibinitperiod}}}%
+        {{uniquename=0,hash=2129608e4cf73389cb393f33ee025ac2}{%
+           family={N},
+           familyi={N\bibinitperiod},
+           given={S\bibnamedelima C},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{uniquename=0,hash=93d3d5b6d54f3d13ea328f954ba72801}{%
+           family={Woodhull},
+           familyi={W\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{2a4b4a62607282874935e06293903ff1}
+      \strng{fullhash}{56612d3a75e63e8bcbae611bb67825b0}
+      \strng{authornamehash}{2a4b4a62607282874935e06293903ff1}
+      \strng{authorfullhash}{56612d3a75e63e8bcbae611bb67825b0}
+      \field{sortinit}{E}
+      \field{sortinithash}{07bbd5a529b5beaa311df5be05b874bc}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Graphviz and Dynagraph – Static and Dynamic Graph Drawing Tools}
+      \field{urlday}{14}
+      \field{urlmonth}{8}
+      \field{urlyear}{2017}
+      \field{year}{2003}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://github.com/JamieDixon/GraphViz-C-Sharp-Wrapper
+      \endverb
+    \endentry
+    \entry{GANSNER2015}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=28c803ef53376e3d9bdeb6429cd00bb0}{%
+           family={Gansner},
+           familyi={G\bibinitperiod},
+           given={Emden\bibnamedelima R.},
+           giveni={E\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{uniquename=0,hash=c50bf772f00bd5d0fe133a2d300bf385}{%
+           family={Koutsofios},
+           familyi={K\bibinitperiod},
+           given={Eleftherios},
+           giveni={E\bibinitperiod}}}%
+        {{uniquename=0,hash=db950751dffc52cc76400e51ec36b01f}{%
+           family={North},
+           familyi={N\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{693b88fe5799caef5f5d968e95a61bf8}
+      \strng{fullhash}{4f3f0c0bd55e09f122b558d132023129}
+      \strng{authornamehash}{693b88fe5799caef5f5d968e95a61bf8}
+      \strng{authorfullhash}{4f3f0c0bd55e09f122b558d132023129}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Drawing graphs with dot}
+      \field{urlday}{25}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb www.graphviz.org/pdf/dotguide.pdf
+      \endverb
+    \endentry
+    \entry{HARTWELL2017}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=539cc130e9b7d453dcea0d9a33734cf9}{%
+           family={Hartwell},
+           familyi={H\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Apress}%
+      }
+      \strng{namehash}{539cc130e9b7d453dcea0d9a33734cf9}
+      \strng{fullhash}{539cc130e9b7d453dcea0d9a33734cf9}
+      \strng{authornamehash}{539cc130e9b7d453dcea0d9a33734cf9}
+      \strng{authorfullhash}{539cc130e9b7d453dcea0d9a33734cf9}
+      \field{sortinit}{H}
+      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{C\# and XML Primer}
+      \field{year}{2017}
+      \field{dateera}{ce}
+    \endentry
     \entry{HERMADI2015}{thesis}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=b699a355f2a23f2af2cd69596ff6005f}{%
@@ -114,36 +280,32 @@
       \field{year}{2015}
       \field{dateera}{ce}
     \endentry
-    \entry{KHAN2011}{article}{}
+    \entry{HOUCQUE2005}{article}{}
       \name{author}{1}{}{%
-        {{uniquename=0,hash=d6ee5af8f47253b08a3fddf624fda0a0}{%
-           family={Khan},
-           familyi={K\bibinitperiod},
-           given={M\bibnamedelima E},
-           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{uniquename=0,hash=9e75c0ef6044583d4acb645f43b69274}{%
+           family={Houcque},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
       }
-      \strng{namehash}{d6ee5af8f47253b08a3fddf624fda0a0}
-      \strng{fullhash}{d6ee5af8f47253b08a3fddf624fda0a0}
-      \strng{authornamehash}{d6ee5af8f47253b08a3fddf624fda0a0}
-      \strng{authorfullhash}{d6ee5af8f47253b08a3fddf624fda0a0}
-      \field{sortinit}{K}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \strng{namehash}{9e75c0ef6044583d4acb645f43b69274}
+      \strng{fullhash}{9e75c0ef6044583d4acb645f43b69274}
+      \strng{authornamehash}{9e75c0ef6044583d4acb645f43b69274}
+      \strng{authorfullhash}{9e75c0ef6044583d4acb645f43b69274}
+      \field{sortinit}{H}
+      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{International Journal of Software Engineering and Its Applications}
-      \field{title}{Different Approaches to White Box Testing Technique for Finding Errors}
-      \field{urlday}{21}
-      \field{urlmonth}{8}
+      \field{title}{Intoruction To MATLAB For Engineering Students}
+      \field{urlday}{30}
+      \field{urlmonth}{12}
       \field{urlyear}{2017}
-      \field{volume}{5}
-      \field{year}{2011}
+      \field{year}{2015}
       \field{dateera}{ce}
       \field{urldateera}{ce}
-      \field{pages}{3}
-      \range{pages}{1}
       \verb{url}
-      \verb http://www.sersc.org/journals/IJSEIA/vol5_no3_2011/1.pdf
+      \verb https://www.mccormick.northwestern.edu/documents/students/undergraduate/introduction-to-matlab.pdf
       \endverb
     \endentry
     \entry{KUMAR20168}{article}{}
@@ -223,6 +385,34 @@
       \field{urldateera}{ce}
       \verb{url}
       \verb https://books.google.co.id/books
+      \endverb
+    \endentry
+    \entry{SUFFOSPARSER2005}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=34cb8b8ce9ff92a2688f72d0c35c6316}{%
+           family={Suffos},
+           familyi={S\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{34cb8b8ce9ff92a2688f72d0c35c6316}
+      \strng{fullhash}{34cb8b8ce9ff92a2688f72d0c35c6316}
+      \strng{authornamehash}{34cb8b8ce9ff92a2688f72d0c35c6316}
+      \strng{authorfullhash}{34cb8b8ce9ff92a2688f72d0c35c6316}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Matlab Parser}
+      \field{urlday}{22}
+      \field{urlmonth}{12}
+      \field{urlyear}{2017}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{url}
+      \verb https://github.com/samuel-suffos/matlab-parser
       \endverb
     \endentry
     \entry{TIKIR2011}{article}{}

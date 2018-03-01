@@ -6,50 +6,52 @@
 \subsection*{Analisis}
 Pada penelitian ini, akan dibangun sebuah perangkat lunak untuk membangkitkan kemungkinan jalur dari sebuah program. Jalur-jalur ini dapat dijadikan dasar untuk membangkitkan data uji agar data uji yang digunakan untuk pengujian dapat mewakili semua kemungkinan. Untuk memonitor jalur mana yang dilalui ketika diberikan masukan data uji, maka sistem ini juga akan melakukan penyisipan tag-tag sebagai instrumentasi ke dalam kode program secara otomatis.
 
-Sebelumnya sudah terdapat beberapa program yang dapat membangkitkan CFG seperti Eclipse  Control Flow Graph Generator tetapi \textit{library} tersebut hanya dapat digunakan di eclipse dan hanya membangkitkan CFG dari kode program java. 
+Sebelumnya sudah terdapat beberapa program yang dapat membangkitkan CFG seperti Eclipse Control Flow Graph Generator tetapi library tersebut hanya dapat digunakan di eclipse dan hanya membangkitkan CFG dari kode program java (\cite{ALIMUCAJ2009}).
 
 Data yang digunakan dalam penelitian ini didapatkan dari penelitian yang dilakukan oleh \citeauthor{HERMADI2015} (\cite*{HERMADI2015}). Terdapat 15 contoh program yang akan digunakan pada penelitian ini dengan tingkat kompleksitas yang beragam. Contoh program yang akan digunakan dapat dilihat pada \ref{tab:jadwal}.
- 
- \begin{table*}[h!]
- 	\begin{center}
- 		\caption{Contoh program uji}
- 		\label{tab:jadwal}
- 		\footnotesize
- 			\begin{tabular}{|l|l|l|p{9cm}|}
- 				\hline
- 				\rowcolor[HTML]{EFEFEF} 
- 				\multicolumn{1}{|c|}{\cellcolor[HTML]{EFEFEF}\textbf{No}} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\textbf{\begin{tabular}[c]{@{}c@{}}Program\\   Uji\end{tabular}}} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\textbf{Nama}} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}\textbf{Deskripsi}}                                                       \\ \hline
- 				1                                                         & triangleAhmed2008                                                                                             & tA2008                                                     & Menentukan tipe dari segitiga apakah termasuk equilateral, isosceles, scalene, atau not triangle                      \\ \hline
- 				2                                                         & minimaxiAhmed2008                                                                                             & mmA2008                                                    & Menentukannilai minimal dan maksimal dari inputan berupa bilangan  dalam array                                        \\ \hline
- 				3                                                         & insertionAhmed2008                                                                                            & iA2008                                                     & Mengurutkan bilangan dalam array menggunakan metode insertion sort                                                    \\ \hline
- 				4                                                         & binnaryAhmed2008                                                                                              & binA2008                                                   & mencari indeks sebuah bilangan dalam array dengan mengembalikan indeks jika ditemukan dan tidak jika tidak ditemukan. \\ \hline
- 				5                                                         & bubbleAhmed2008                                                                                               & bubA2008                                                   & Mengurutkan bilangan dalam array menggunakan metode bubble sort                                                       \\ \hline
- 				6                                                         & gcdAhmed2008                                                                                                  & gA2008                                                     & Menghitung GCD atau pembagi dua bilangan terbesar                                                                     \\ \hline
- 				7                                                         & expintBueno2002                                                                                               & eB2002                                                     & Fungsi exponensial yang dapat memproses bilangan integer dan float                                                    \\ \hline
- 				8                                                         & quotientBueno2002                                                                                             & qB2002                                                     & Menghitung hasil bagi dan sisa hasil bagi dari dua buah bilangan bulat positif                                        \\ \hline
- 				9                                                         & findBueno2002                                                                                                 & fB2002                                                     & Mengurutkan bilangan dalam array sebagian                                                                             \\ \hline
- 				10                                                        & fitnessMiniMaxiHermadi2014                                                                                    & fmH2014                                                    & Menghitung fungsi fitness dari fungsi minimaxiAhmed2008                                                               \\ \hline
- 			\end{tabular}
- 		\normalsize
- 	\end{center}
- \end{table*}
+
+\begin{table*}[h!]
+	\begin{center}
+		\caption{Contoh program uji}
+		\label{tab:jadwal}
+		\footnotesize
+		\begin{tabular}{lllp{9cm}}
+			\hline
+			\multicolumn{1}{c}{\textbf{No}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Program\\   Uji\end{tabular}}} & \multicolumn{1}{c}{\textbf{Nama}} & \multicolumn{1}{c}{\textbf{Deskripsi}}\\ \hline
+			1  & Triangle Ahmed & tA2008   & Menentukan tipe dari segitiga apakah termasuk equilateral, isosceles, scalene, atau not triangle    \\ \hline
+			2  & Minimaxi Ahmed & mmA2008  & Menentukannilai minimal dan maksimal dari inputan berupa bilangan  dalam array   \\ \hline
+			3 & Binary Ahmed  & binA2008 & mencari indeks sebuah bilangan dalam array dengan mengembalikan indeks jika ditemukan dan tidak jika tidak ditemukan. \\ \hline
+			4  & Bubble Ahmed   & bubA2008 & Mengurutkan bilangan dalam array menggunakan metode bubble sort\\ \hline
+			5  & Quotient Bueno & qB2002   & Menghitung hasil bagi dan sisa hasil bagi dari dua buah bilangan bulat positif   \\ \hline
+			6 & Fitness Minimaxi Hermadi   & fmH2014  & Menghitung fungsi fitness dari fungsi minimaxiAhmed2008 \\ \hline
+			7  & Insertion Ahmed& iA2008   & Mengurutkan bilangan dalam array menggunakan metode insertion sort  \\ \hline
+			8& Gcd Ahmed      & gA2008   & Menghitung GCD atau pembagi dua bilangan terbesar \\ \hline
+			9  & Expint Bueno   & eB2002   & Fungsi exponensial yang dapat memproses bilangan integer dan float  \\ \hline
+			10  & Flex Gong     & fG2011   & Sebuah utilitas unix yang diambil dari situs GNU   \\ \hline
+			 \hline
+		\end{tabular}
+		\normalsize
+	\end{center}
+\end{table*}
 
 \subsection*{Perancangan}
 
 \subsubsection*{Perancangan \textit{Class Diagram}}
-Class diagram dibangun untuk menggambarkan struktur sistem dari segi pendefinisian class-class. Perancangan Class diagram dapat dilihat pada Gambar \ref{fig:classdiagram}.
-\begin{figure}[h!]
+\textit{Class diagram} dibangun untuk menggambarkan struktur sistem dari segi pendefinisian \textit{class} dan huubungan antar \textit{class}. Perancangan \textit{class diagram} dapat dilihat pada Gambar \ref{fig:classdiagram}.
+\begin{figure}
 	\centering
-	\includegraphics[width=230pt]{gambar/classdiagram}
+	\includegraphics[width=0.95\linewidth]{gambar/classdiagram}
 	\caption{\textit{Perancangan \textit{Class Diagram}}}
 	\label{fig:classdiagram}
 \end{figure}
-\textit{Class graph} memiliki atribut berupa list dari class node. Dalam sebuah \textit{class node} terdapat informasi nomor \textit{node}, nomor baris dan kolom dari kode program, tipe dari perintah tersebut. Selain itu, terdapat list edge yang berisi \textit{node} tujuan dan tipe dari \textit{edge} yang digunakan jika terdapat percabangan apakah \textit{true}, \textit{false}, atau hanya garis penghubung biasa.
+
+Dalam sebuah \textit{class node} terdapat informasi nomor \textit{node}, nomor baris dan nomor kolom dari kode program, dan tipe dari perintah tersebut apakah termasuk percabangan, pengulangan, perintah biasa, atau akhir dari sebuah perintah. Selain itu, terdapat list \textit{edge} yang berisi \textit{node} tujuan dan tipe dari \textit{edge} yang digunakan jika terdapat percabangan \textit{true}, \textit{false}, atau hanya garis penghubung biasa.
+
 \subsubsection*{Perancangan Antarmuka}
-Perancangan antarmuka meliputi perancangan antarmuka form untuk pengguna memasukkan kode program yang akan di proses dan antarmuka hasil dari proses yang telah dilakukan. Perancangan antarmuka hasil dari proses yang telah dilakukan dapat dilihat pada Gambar \ref{fig:perancanganantarmuka}.
+Perancangan antarmuka meliputi perancangan antarmuka \textit{form} untuk pengguna memasukkan kode program yang akan di proses dan antarmuka hasil dari proses yang telah dilakukan oleh aplikasi. Perancangan antarmuka hasil dari proses yang telah dilakukan dapat dilihat pada Gambar \ref{fig:perancanganantarmuka}.
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=230pt]{gambar/perancanganantarmuka}
+	\includegraphics[width=0.9\linewidth]{gambar/perancanganantarmuka}
 	\caption{\textit{Perancangan antarmuka sistem}}
 	\label{fig:perancanganantarmuka}
 \end{figure}
@@ -62,9 +64,9 @@ Sebagai contoh, kode program yang digunakan adalah tA2008. Pada kode tA2008 terd
 
 \subsubsection*{Kode Program}
 Gambar \ref{fig:tA2008} merupakan kode program tA2008, yaitu fungsi untuk mencari jenis dari segitiga jika diketahui panjang dari setiap sisinya.
-\begin{figure}[h!]
+\begin{figure}
 	\centering
-	\includegraphics[width=230pt]{gambar/tA2008}
+	\includegraphics[width=0.95\linewidth]{gambar/tA2008}
 	\caption{\textit{Kode program tA2008}}
 	\label{fig:tA2008}
 \end{figure}
@@ -74,31 +76,33 @@ Penguraian kode program matlab dilakukan dengan menggunakan \textit{library}  MA
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\linewidth]{"gambar/XML tA2008"}
+	\includegraphics[width=0.95\linewidth]{"gambar/XML tA2008"}
 	\caption{Potongan hasil penguraian kode program tA2008 ke dalam format XML}
 	\label{fig:xml-ta2008}
 \end{figure}
 
-\subsubsection*{Membangkitkan \textit{Graph}}
-Salah satu cara untuk membaca dan menulis dokumen XML pada framework .NET dan C\# yaitu dengan menggunakan kelas XMLDocument yang terdapat dalam \textit{namespace System.XML}. Setiap elemen XML yang merupakan struktur kontrol pada program akan menjadi \textit{node} baru di dalam kelas \textit{graph}. Setiap \textit{node} berisi informasi nomor baris dan kolom yang akan digunakan untuk melakukan instrumentasi. Setiap \textit{node} juga dapat memiliki \textit{edge} yang berisi informasi \textit{node} tujuan dan tipe dari garis penghubung itu sendiri. Terdapat tiga macam tipe pada edge yaitu \textit{null}, \textit{true}, dan \textit{false}. \textit{True} dan \textit{false} digunakan jika \textit{node} asal merupakan percabangan.
+Ketika ditemukan perintah IF maka akan dibentuk sebuah elemen <if></if>. Lalu untuk bagian memenuhi kondisi IF akan disimpan di dalam elemen <If.IfPart></If.IfPart>. Ekspresi dari kondisi IF akan disimpan di dalam elemen <IfPart.Expression> </IfPart.Expression>. Perintah yang akan dilakukan ketika memenuhi kondisi IF akan disimpan dalam elemen <IfPart.Statements></IfPart. Statements>. Sedangkan untuk bagian yang tidak memenuhi kondisi IF atau bagian ELSE akan disimpan di dalam elemen <If.ElsePart></If.ElsePart>. 
 
-Hasil \textit{node} yang dibentuk dari kode program tA2008 dapat dilihat pada \ref{fig:hasil-node}. \textit{Node} 1 dibentuk pada awal kode program sebagai inisialisasi. \textit{Node} ditambahkan ketika bertemu dengan perintah yang termasuk ke dalam struktur kontrol seperti IF-ELSE-END, SWITCH-CASE, FOR, dan WHILE. Seperti dapat dilihat pada baris kode ke 5, terdapat perintah IF sehingga dibentuk node baru yaitu \textit{node} 2. 
+\subsubsection*{Membangkitkan \textit{Graph}}
+Salah satu cara untuk membaca dan menulis dokumen XML pada framework .NET dan C\# yaitu dengan menggunakan kelas XMLDocument yang terdapat dalam \textit{namespace System.XML}. Setiap elemen XML yang merupakan struktur kontrol pada program akan menjadi \textit{node} baru di dalam kelas \textit{graph}. Setiap \textit{node} berisi informasi nomor baris dan kolom yang akan digunakan untuk melakukan instrumentasi. Setiap \textit{node} juga dapat memiliki \textit{edge} yang berisi informasi \textit{node} tujuan dan tipe dari garis penghubung itu sendiri. Terdapat tiga macam tipe pada \textit{edge} yaitu \textit{null}, \textit{true}, dan \textit{false}. \textit{True} dan \textit{false} digunakan jika \textit{node} asal merupakan percabangan.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.9\linewidth]{"gambar/hasil node"}
 	\caption{Hasil nodes yang terbentuk dari tA2008}
 	\label{fig:hasil-node}
 \end{figure}
-Representasi objek dari kelas \textit{graph} yang terbentuk dari kode program tA2008 dapat dilihat pada \ref{fig:objectdiagram}. Terbentuk 9 buah \textit{node} dan 11 buah \textit{edge} yang menghubungkan antar \textit{node} tersebut.
+Hasil \textit{node} yang dibentuk dari kode program tA2008 dapat dilihat pada \ref{fig:hasil-node}. \textit{Node} 1 dibentuk pada awal kode program sebagai inisialisasi. \textit{Node} ditambahkan ketika bertemu dengan perintah yang termasuk ke dalam struktur kontrol seperti IF-ELSE-END, SWITCH-CASE, FOR, dan WHILE. Seperti dapat dilihat pada baris kode ke 5, terdapat perintah IF sehingga dibentuk \textit{node} baru yaitu \textit{node} 2. 
+
+Representasi objek dari kelas \textit{graph} yang terbentuk dari kode program tA2008 dapat dilihat pada \ref{fig:objectdiagram}. \textit{Graph} disimpan ke dalam struktur data \textit{adjacency list} dari objek \textit{node} yang dihubungkan oleh objek \textit{edge}.  Terbentuk 9 buah \textit{node} dan 11 buah \textit{edge} yang menghubungkan antar \textit{node} tersebut.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\linewidth]{gambar/ObjectDiagram}
+	\includegraphics[width=0.85\linewidth]{gambar/ObjectDiagram}
 	\caption{Object diagram tA2008}
 	\label{fig:objectdiagram}
 \end{figure}
 
 \subsubsection*{Membangkitkan Jalur}
-Jalur dibentuk dengan cara menelusuri objek graph yang sudah dibentuk sebelumnya. Jika \textit{edge} memiliki tipe \textit{true} atau \textit{false}, maka jalur yang dibangkitkan akan ditambahkan informasi cabang yang dilalui. (T) ketika melalui edge yang memiliki tipe \textit{true}, dan (F)  ketika melalui \textit{edge} yang memiliki tipe \textit{false}. Setiap \textit{edge} memiliki atribut \textit{isVisited} yang digunakan untuk menandai apakah garis penghubung tersebut sudah dilalui atau belum. Jalur yang dibentuk ketika melalui perintah pengulangan seperti FOR dan WHILE akan dibatasi hanya satu kali pengulangan. Berikut merupakan semua kemungkinan jalur yang akan dilalui ketika diberikan suatu inputan yang dapat dijadikan sebagai dasar dalam pembangkitan data uji.
+Jalur dibentuk dengan cara menelusuri objek \textit{graph} yang sudah dibentuk sebelumnya. Jika \textit{edge} memiliki tipe \textit{true} atau \textit{false}, maka jalur yang dibangkitkan akan ditambahkan informasi cabang yang dilalui. (T) ketika melalui \textit{edge} yang memiliki tipe \textit{true}, dan (F)  ketika melalui \textit{edge} yang memiliki tipe \textit{false}. Setiap \textit{edge} memiliki atribut \textit{isVisited} yang digunakan untuk menandai apakah garis penghubung tersebut sudah dilalui atau belum. Jalur yang dibentuk ketika melalui perintah pengulangan seperti FOR dan WHILE akan dibatasi hanya satu kali pengulangan. Berikut merupakan semua kemungkinan jalur yang akan dilalui ketika diberikan suatu inputan yang dapat dijadikan sebagai dasar dalam pembangkitan data uji.
 \begin{enumerate}[noitemsep] 
 	\item 1 2 (T) 3 (T) 4 8
 	\item 1 2 (T) 3 (F) 5 (T) 6 8
@@ -107,40 +111,40 @@ Jalur dibentuk dengan cara menelusuri objek graph yang sudah dibentuk sebelumnya
 \end{enumerate}
 
 \subsubsection*{Transformasi ke Dalam Format Bahasa Dot}
-Transformasi ke dalam format bahasa dot dilakukan dengan cara menelusuri objek \textit{graph} yang sudah dibangun sebelumnya. Yang didefinisikan dalam bahasa dot adalah \textit{edge} yang terdapat pada \textit{graph} yang dibangun. Seperti yang dapat dilihat pada \ref{fig:dot}, jumlah baris sebanyak jumlah \textit{edge} pada objek graph yang telah didefinisikan sebelumnya.
+Transformasi ke dalam format bahasa dot dilakukan dengan cara menelusuri objek \textit{graph} yang sudah dibangun sebelumnya. Yang didefinisikan dalam bahasa dot adalah \textit{edge} yang terdapat pada \textit{graph} yang dibangun. Seperti yang dapat dilihat pada \ref{fig:dot}, jumlah baris sebanyak jumlah \textit{edge} pada objek \textit{graph} yang telah didefinisikan sebelumnya.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\linewidth]{gambar/dot}
+	\includegraphics[width=0.95\linewidth]{gambar/dot}
 	\caption{Representasi tA2008 dalam bahasa dot}
 	\label{fig:dot}
 \end{figure}
 
 \subsubsection*{Memvisualisasi \textit{Graph} dalam bentuk CFG}
-Setelah file dengan format bahasa dot terbentuk, CFG divisualisasikan dengan menggunakan library Graphviz.Net. Hasil visualisasi bahasa dot kode program tA2008 ke dalam CFG dapat dilihat pada \ref{fig:cfgta2008}.
+Setelah file dengan format bahasa dot terbentuk, CFG divisualisasikan dengan menggunakan \textit{library} Graphviz.Net. Hasil visualisasi bahasa dot kode program tA2008 ke dalam CFG dapat dilihat pada \ref{fig:cfgta2008}.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\linewidth]{gambar/cfgtA2008}
+	\includegraphics[width=0.85\linewidth]{gambar/cfgtA2008}
 	\caption{CFG tA2008}
 	\label{fig:cfgta2008}
 \end{figure}
 
 \subsubsection*{Menghitung \textit{Cyclometic Complexity}}
 
-\textit{Cyclomatic complexity} merupakan suatu sistem pengukuran yang menunjukkan banyaknya \textit{independent path}. \textit{Cyclomatic Complexity }dihitung dengan cara jumlah \textit{edge} dikurangi dengan jumlah \textit{node}, lalu ditambahkan dengan dua. Berdasarkan graph yang telah terbentuk dari kode program tA2008, dapat dilihat pada \ref{fig:objectdiagram} bahwa jumlah \textit{node} yang terbentuk adalah 9 dan jumlah \textit{edge} yang terbentuk adalah 11. Sehingga hasil perhitungan cyclomatic complexity dapat dilihat pada persamaan dibawah ini.
+\textit{Cyclomatic complexity} merupakan suatu sistem pengukuran yang menunjukkan banyaknya \textit{independent path}. \textit{Cyclomatic Complexity }dihitung dengan cara jumlah \textit{edge} dikurangi dengan jumlah \textit{node}, lalu ditambahkan dengan dua. Berdasarkan \textit{graph} yang telah terbentuk dari kode program tA2008, dapat dilihat pada \ref{fig:objectdiagram} bahwa jumlah \textit{node} yang terbentuk adalah 9 dan jumlah \textit{edge} yang terbentuk adalah 11. Sehingga hasil perhitungan cyclomatic complexity dapat dilihat pada persamaan dibawah ini.
 \[Nodes (N) = 9\]
 \[Edges (E) = 11\]
 \[V(G) = E - N + 2\]
 \[     = 4\]
 
 \subsubsection*{Instrumentasi}
-Instrumentasi dilakukan dengan cara menambahkan dulu variabel keluaran bernama traversedPath. Variabel in digunakan untuk menyimpan informasi node mana saja yang dilalui ketika diberikan inputan dengan nilai tertentu. Dan menyimpan informasi pilihan yang dilalui ketika ditemukan cabang yang terdapat pilihan \textit{true} atau \textit{false}.
+Instrumentasi dilakukan dengan cara menambahkan dulu variabel keluaran bernama traversedPath. Variabel in digunakan untuk menyimpan informasi \textit{node} mana saja yang dilalui ketika diberikan inputan dengan nilai tertentu. Dan menyimpan informasi pilihan yang dilalui ketika ditemukan cabang yang terdapat pilihan \textit{true} atau \textit{false}.
 
-Hasil kode program yang telah diinstrumentasi dapat dilihat pada Gambar 13. Sebelumnya, kode program tA2008 hanya mengembalikan keluaran satu variabel bernama type yaitu menunjukan jenis dari segitiga ketika diberikan panjang dari ketiga sisi segitiga. Setelah dilakukan instrumentasi, kode program tA2008 akan mengembalikan keluaran dengan variabel tambahan bernama traversedPath.  Sehingga ketika program tersebut dijalankan dengan inputan tertentu akan menghasilkan keluaran nilai traversedPath dan type seperti yang dapat dilihat pada Gambar \ref{fig:instrumentasi}.
+Hasil kode program yang telah diinstrumentasi dapat dilihat pada \ref{fig:instrumentasi}. Sebelumnya, kode program tA2008 hanya mengembalikan keluaran satu variabel bernama type yaitu menunjukan jenis dari segitiga ketika diberikan panjang dari ketiga sisi segitiga. Setelah dilakukan instrumentasi, kode program tA2008 akan mengembalikan keluaran dengan variabel tambahan bernama traversedPath.  Sehingga ketika program tersebut dijalankan dengan inputan tertentu akan menghasilkan keluaran nilai \textit{traversedPath} dan \textit{type} seperti yang dapat dilihat pada Gambar \ref{fig:instrumentasi}.
 
-Sehingga ketika kode program hasil instrumentasi dijalankan dengan inputan tertentu akan menghasilkan keluaran variabel traversedPath dan type seperti yang dapat dilihat pada Gambar \ref{fig:hasilekseskusi}. Misalkan inputan adalah 3, 4, dan 4 akan menghasilkan isosceles dan dapat diketahui bagaimana cara menghasilkan keluaran tersebut dari traversedPath. 
-\begin{figure}
+Sehingga ketika kode program hasil instrumentasi dijalankan dengan inputan tertentu akan menghasilkan keluaran variabel \textit{traversedPath} dan \textit{type} seperti yang dapat dilihat pada Gambar \ref{fig:hasilekseskusi}. Misalkan inputan adalah 3, 4, dan 4 akan menghasilkan \textit{isosceles} dan dapat diketahui bagaimana cara menghasilkan keluaran tersebut dari \textit{traversedPath}. 
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.9\linewidth]{gambar/instrumentasi}
+	\includegraphics[width=0.95\linewidth]{gambar/instrumentasi}
 	\caption{Hasil instrumentasi tA2008}
 	\label{fig:instrumentasi}
 \end{figure}
@@ -154,7 +158,7 @@ Sehingga ketika kode program hasil instrumentasi dijalankan dengan inputan terte
 \subsubsection*{Implementasi Antarmuka}
 Tampilan hasil pembangkitan dapat dilihat pada Gambar \ref{fig:implementasiantarmuka}.
 
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.9\linewidth]{gambar/implementasiantarmuka}
 	\caption{Tampilan hasil pembangkitan}
@@ -163,23 +167,83 @@ Tampilan hasil pembangkitan dapat dilihat pada Gambar \ref{fig:implementasiantar
 
 \subsection*{Testing}
 
-Tahapan ini adalah melakukan evaluasi dari tahapan implementasi. Evaluasi dilakukan dengan membandingkan hasil yang dikeluarkan oleh sistem dengan pembangkitan secara manual dari segi waktu eksekusi. Penguji terdiri dari dua orang yang berprofesi sebagai pengembang sistem. 
+Tahapan ini adalah melakukan evaluasi dari tahapan implementasi. Evaluasi dibagi menjadi dua bagian, yaitu uji validasi dan uji efisiensi. Uji validasi dilakukan dengan cara membandingkan hasil yang ada pada penelitian sebelumnya dengan hasil yang dikeluarkan oleh aplikasi. Pada penelitian sebelumnya, \textit{graph} yang dibangun adalah \textit{graph} yang hanya menggambarkan notasi percabangan. Agar dapat dibandingkan dengan hasil yang dikeluarkan oleh aplikasi, \textit{graph} yang ada pada penelitian sebelumnya direpresentasikan ke dalam bentuk adjacency list terlebih dahulu secara manual. Tabel 2 menunjukkan adjacency list yang dibangun berdasarkan pada penelitian sebelumnya dan adjacency list yang dibangun menggunakan aplikasi. 
 
-Hasil jalur yang dibentuk dan nilai \textit{cyclomatic complexity} dari program uji dapat dilihat pada Tabel 2. Hasil perbandingan waktu yang dibutuhkan untuk melakukan pembangkitan secara manual dan oleh aplikasi dapat dilihat pada Tabel 3.
-\begin{table}
+
+Dari 10 program uji, bentuk \textit{graph} yang terbentuk jika divisualisasikan dalam bentuk CFG sama. Perbedaan hanya terdapat pada label penomoran beberapa node. Seperti pada contoh program tA2008, \textit{node} 4, 5, 6, 7, 8, 9 menjadi \textit{node} 9, 4, 5, 6, 7, 8 di \textit{graph} yang dibangun menggunakan aplikasi.
+
+	\begin{table*} 
+		\caption{Perbandingan \textit{adjacency list} manual dan menggunakan aplikasi}
+		
+		\footnotesize
+		\begin{minipage}{0.5\textwidth}
+			\begin{tabular}{llll}
+				\toprule
+				\textbf{No} & 
+				\textbf{\begin{tabular}[c]{@{}c@{}}Nama\\ Program\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Adjacency List\\ Penelitian\\ Sebelumnya\end{tabular}} & 
+			    \textbf{\begin{tabular}[c]{@{}c@{}}Adjacency List\\ Menggunakan\\ Aplikasi\end{tabular}}\\
+				\midrule
+				1 & tA2008 & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 4\\ · 3 -\textgreater 5 -\textgreater 6\\ · 4 -\textgreater 9  \\ · 5 -\textgreater 9\\ · 6 -\textgreater 7 -\textgreater 8\\ · 7 -\textgreater 9\\ · 9\\ · 8 -\textgreater 9\end{tabular} & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 9\\ · 3 -\textgreater 4 -\textgreater 5\\ · 4 -\textgreater 8\\ · 5 -\textgreater 6 -\textgreater 7\\ · 6 -\textgreater 8\\ · 7 -\textgreater 8\\ · 8\\ · 9 -\textgreater 8\end{tabular} \\ \hline
+				
+				2 & mmA2008 & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 8\\ · 3 -\textgreater 4 -\textgreater 5\\ · 4 -\textgreater 5\\ · 5 -\textgreater 6 -\textgreater 7\\ · 6 -\textgreater 7\\ · 7 -\textgreater 2\\ · 8\end{tabular} & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 8\\ · 3 -\textgreater 4 -\textgreater 5\\ · 4 -\textgreater 5\\ · 5 -\textgreater 6 -\textgreater 7\\ · 6 -\textgreater 7\\ · 7 -\textgreater 2\\ · 8\end{tabular} \\ \hline
+				
+				
+				3 & binA2008 & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 9\\ · 3 -\textgreater 4 -\textgreater 5\\ · 4 -\textgreater 5\\ · 5 -\textgreater 6 -\textgreater 7\\ · 6 -\textgreater 8\\ · 7 -\textgreater 8\\ · 8 -\textgreater 2\\ · 9 -\textgreater 10 -\textgreater 11\\ · 10 -\textgreater 12\\ · 11 -\textgreater 12\\ · 12\end{tabular} & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 9\\ · 3 -\textgreater 4 -\textgreater 5\\ · 4 -\textgreater 5\\ · 5 -\textgreater 6 -\textgreater 7\\ · 6 -\textgreater 8\\ · 7 -\textgreater 8\\ · 8 -\textgreater 2\\ · 9 -\textgreater 10 -\textgreater 11\\ · 10 -\textgreater 12\\ · 11 -\textgreater 12\\ · 12\end{tabular} \\ \hline
+				
+				4 & bubA2008 & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 8\\ · 3 -\textgreater 4 -\textgreater 7\\ · 4 -\textgreater 5 -\textgreater 6\\ · 5 -\textgreater 6\\ · 6 -\textgreater 3\\ · 7 -\textgreater 2\\ · 8\end{tabular} & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 8\\ · 3 -\textgreater 4 -\textgreater 7\\ · 4 -\textgreater 5 -\textgreater 6\\ · 5 -\textgreater 6\\ · 6 -\textgreater 3\\ · 7 -\textgreater 2\\ · 8\end{tabular} \\ \hline
+				
+				5 & qB2002 & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 10\\ · 3 -\textgreater 4 -\textgreater 10\\ · 4 -\textgreater 5 -\textgreater 6\\ · 5 -\textgreater 4\\ · 6 -\textgreater 7 -\textgreater 10\\ · 7 -\textgreater 8 -\textgreater 9\\ · 8 -\textgreater 9\\ · 9 -\textgreater 6\\ · 10\end{tabular} & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 10\\ · 3 -\textgreater 4 -\textgreater 10\\ · 4 -\textgreater 5 -\textgreater 6\\ · 5 -\textgreater 4\\ · 6 -\textgreater 7 -\textgreater 10\\ · 7 -\textgreater 8 -\textgreater 9\\ · 8 -\textgreater 9\\ · 9 -\textgreater 6\\ · 10\end{tabular} \\ \hline
+				
+				6 & fmH2014 & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 4 -\textgreater 5\\ · 3 -\textgreater 6\\ · 4 -\textgreater 6\\ · 5 -\textgreater 6\\ · 6 -\textgreater 7 -\textgreater 10\\ · 7 -\textgreater 8 -\textgreater 9\\ · 8 -\textgreater 10\\ · 9 -\textgreater 10\\ · 10\end{tabular} & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 4 -\textgreater 5\\ · 3 -\textgreater 6\\ · 4 -\textgreater 6\\ · 5 -\textgreater 6\\ · 6 -\textgreater 7 -\textgreater 10\\ · 7 -\textgreater 8 -\textgreater 9\\ · 8 -\textgreater 10\\ · 9 -\textgreater 10\\ · 10\end{tabular} \\ \hline
+				\bottomrule
+			\end{tabular}
+			
+		\end{minipage} \hfill
+		\begin{minipage}{0.5\textwidth}
+			\begin{tabular}{llll}
+				\toprule
+				\textbf{No} & 
+				\textbf{\begin{tabular}[c]{@{}c@{}}Nama\\ Program\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Adjacency List\\ Penelitian\\ Sebelumnya\end{tabular}} & 
+				\textbf{\begin{tabular}[c]{@{}c@{}}Adjacency List\\ Menggunakan\\ Aplikasi\end{tabular}}\\
+				\midrule
+				7 & iA2008 & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 6\\ · 3 -\textgreater 4 -\textgreater 5\\ · 4 -\textgreater 3\\ · 5 -\textgreater 2\\ · 6\end{tabular} & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 6\\ · 3 -\textgreater 4 -\textgreater 5\\ · 4 -\textgreater 3\\ · 5 -\textgreater 2\\ · 6\end{tabular} \\ \hline
+				
+				8 & gA2008 & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 4\\ · 3 -\textgreater 9\\ · 4 -\textgreater 5 -\textgreater 9\\ · 5 -\textgreater 6 -\textgreater 7\\ · 6 -\textgreater 8\\ · 7 -\textgreater 8\\ · 8 -\textgreater 4\\ · 9\end{tabular} & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 4\\ · 3 -\textgreater 9\\ · 4 -\textgreater 5 -\textgreater 9\\ · 5 -\textgreater 6 -\textgreater 7\\ · 6 -\textgreater 8\\ · 7 -\textgreater 8\\ · 8 -\textgreater 4\\ · 9\end{tabular} \\ \hline
+				
+				9 & eB2002 & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 4 \\ \enspace -\textgreater 5 -\textgreater 6 -\textgreater 7\\ · 3 -\textgreater 11\\ · 4 -\textgreater 11\\ · 5 -\textgreater 11\\ · 6 -\textgreater 8 -\textgreater 11\\ · 8 -\textgreater 9 -\textgreater 10\\ · 9 -\textgreater 10\\ · 10 -\textgreater 6\\ · 11\\ · 7 -\textgreater 12 -\textgreater 13\\ · 12 -\textgreater 14\\ · 13 -\textgreater 14\\ · 14 -\textgreater 15 -\textgreater 20\\ · 15 -\textgreater 16 -\textgreater 18\\ · 16 -\textgreater 19\\ · 18 -\textgreater 19 -\textgreater 19\\ · 19 -\textgreater 18\\ · 19 -\textgreater 20 -\textgreater 21\\ · 20 -\textgreater 21\\ · 21 -\textgreater 14\end{tabular} & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 4  \\ \enspace -\textgreater 5 -\textgreater 6 -\textgreater 11\\ · 3 -\textgreater 10\\ · 4 -\textgreater 10\\ · 5 -\textgreater 10\\ · 6 -\textgreater 7 -\textgreater 10\\ · 7 -\textgreater 8 -\textgreater 9\\ · 8 -\textgreater 9\\ · 9 -\textgreater 6\\ · 10\\ · 11 -\textgreater 12 -\textgreater 13\\ · 12 -\textgreater 14\\ · 13 -\textgreater 14\\ · 14 -\textgreater 15 -\textgreater 20\\ · 15 -\textgreater 16 -\textgreater 17\\ · 16 -\textgreater 19\\ · 17 -\textgreater 18 -\textgreater 19\\ · 18 -\textgreater 17\\ · 19 -\textgreater 20 -\textgreater 21\\ · 20 -\textgreater 21\\ · 21 -\textgreater 14\end{tabular} \\ \hline
+				
+				10  & fG2011       & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 20\\ · 3 -\textgreater 4 -\textgreater 11\\ · 4 -\textgreater 5 -\textgreater 6\\ · 5 -\textgreater 7\\ · 6 -\textgreater 7\\ · 7 -\textgreater 8 -\textgreater 9\\ · 8 -\textgreater 10\\ · 9 -\textgreater 10\\ · 10 -\textgreater 12 -\textgreater 13\\ · 11 -\textgreater 10\\ · 12 -\textgreater 14 -\textgreater 15\\ · 14 -\textgreater 16\\ · 15 -\textgreater 16\\ · 16 -\textgreater 17 -\textgreater 18\\ · 13 -\textgreater 16\\ · 17 -\textgreater 19\\ · 18 -\textgreater 19\\ · 19 -\textgreater 2\\ · 20\end{tabular} & \begin{tabular}[c]{@{}l@{}}· 1 -\textgreater 2\\ · 2 -\textgreater 3 -\textgreater 20\\ · 3 -\textgreater 4 -\textgreater 11\\ · 4 -\textgreater 5 -\textgreater 6\\ · 5 -\textgreater 7\\ · 6 -\textgreater 7\\ · 7 -\textgreater 8 -\textgreater 9\\ · 8 -\textgreater 10\\ · 9 -\textgreater 10\\ · 10 -\textgreater 12 -\textgreater 16\\ · 11 -\textgreater 10\\ · 12 -\textgreater 13 -\textgreater 14\\ · 13 -\textgreater 15\\ · 14 -\textgreater 15\\ · 15 -\textgreater 17 -\textgreater 18\\ · 16 -\textgreater 15\\ · 17 -\textgreater 19\\ · 18 -\textgreater 19\\ · 19 -\textgreater 2\\ · 20\end{tabular}
+				 \\ \hline
+				\bottomrule
+			
+			\end{tabular}
+			
+		\end{minipage}
+	\end{table*}
+Uji efisiensi dilakukan dengan membandingkan waktu eksekusi yang dilaukan secara manual dengan waktu eksekusi oleh aplikasi. Penguji terdiri dari dua orang yang berprofesi sebagai pengembang sistem. Hasil perbandingan waktu yang dibutuhkan untuk melakukan pembangkitan secara manual dan oleh aplikasi dapat dilihat pada Tabel 3. Program uji nomor 1 tA2008 tidak ada waktu eksekusi secara manual karena program tersebut sudah digunakan sebagai contoh.
+
+Waktu yang dibutuhkan aplikasi untuk membangkitkan CFG, melakukan instrumentasi, menghitung \textit{cyclomatic complexity}, dan membangkitkan semua kemungkinan jalur rata-rata 1.64 detik. Sedangkan jika hal tersebut dilakukan secara manual, akan menghabiskan waktu rata-rata 383.28 detik atau 6 menit 23 detik. Jumlah waktu yang dibutuhkan juga akan semakin meningkat ketika kode program semakin kompleks seperti pada program uji nomor 9 eB2002 yang dapat menghabiskan waktu rata-rata 659.43 detik atau 10 menit 59 detik. Sedangkan tidak berpengaruh ketika dieksekusi menggunakan aplikasi yang hanya menghabiskan waktu 1.47 detik.
+   
+
+\begin{table}[h!]
 	\centering
-	\caption{Hasil jalur dan \textit{cyclomatic complexity} dari program uji}
-	\label{tab:tabeljalur}
-	\includegraphics[width=0.9\linewidth]{gambar/tabeljalur}
+	\caption{Perbandingan waktu eksekusi secara menual dan menggunakan aplikasi}
+	\footnotesize
+	\begin{tabular}{llrrrr}
+		\hline
+		\textbf{\begin{tabular}[c]{@{}c@{}}\\No\\\end{tabular}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Nama\\ Program\\\end{tabular}}}} & \multicolumn{1}{c}{\multirow{2}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Waktu \\ Eksekusi\\ Aplikasi\\ (detik)\end{tabular}}}} & \multicolumn{3}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Waktu Ekseskusi Manual\\ (detik)\end{tabular}}} \\ \cline{4-6} 
+		& \multicolumn{1}{c}{}    & \multicolumn{1}{c}{}& \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Penguji\\ 1\end{tabular}}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Penguji\\ 2\end{tabular}}} & \multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Rata-\\ Rata\end{tabular}}} \\[11pt] \hline
+		
+		1   & tA2008  & 1.53 & \multicolumn{1}{c}{-}   & \multicolumn{1}{c|}{-}   & \multicolumn{1}{c|}{-}    \\ \hline
+		2   & mmA2008 & 1.71 & 558.23 & 407.90 & 483.07  \\ \hline
+		3   & binA2008& 1.45 & 384.64 & 526.59 & 455.62  \\ \hline
+		4   & bubA2008& 1.39 & 448.64 & 207.97 & 328.31  \\ \hline
+		5   & qB2002  & 1.75 & 222.25 & 280.86 & 251.56  \\ \hline
+		6  & fmH2014 & 1.81 & 201.87 & 223.07 & 212.47  \\ \hline
+		7   & iA2008  & 1.56 & 234.55 & 358.51 & 296.53  \\ \hline
+		8   & gA2008  & 2.09 & 492.93 & 293.01 & 392.97  \\ \hline
+		9   & eB2002  & 1.47 & 686.59 & 632.27 & 659.43  \\ \hline
+		10   & fG2011  & 1.64 & 335.92 & 403.27 & 369.60  \\ \hline
+		\multicolumn{2}{r}{\textbf{Rata-Rata}}& \textbf{1.64} & 396.18 & 370.38 & \textbf{383.28}    \\ \hline\hline
+	\end{tabular}
 \end{table}
-
-Jumlah jalur yang terbentuk bisa lebih besar dari cyclomatic complexity karena jumlah jalur yang tebentuk adalah dari semua kemungkinan. Sedangkan jumlah cyclomatic complexity menunjukkan independent path yaitu jalur yang setidaknya ada 1 jalur baru yang dilalui.    
-
-\begin{table}
-	\centering
-	\caption{Perbandingan eksekusi secara menual dan oleh aplikasi}
-	\label{fig:tabelperbandingan}
-	\includegraphics[width=0.9\linewidth]{gambar/tabelperbandingan}
-\end{table}
-
-
